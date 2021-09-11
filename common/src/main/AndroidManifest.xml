@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.irigel.common">
+    <meta-data
+        android:name="com.huawei.hms.ml.DEPENDENCY"
+        android:value= "imgseg"/>
+    <application>
+
+        <!-- 必须注册在微博授权，分享微博时候用到 -->
+        <!--<activity android:name="com.sina.weibo.sdk.component.WeiboSdkBrowser"
+                  android:configChanges="keyboardHidden|orientation"
+                  android:windowSoftInputMode="adjustResize"
+                  android:exported="false" />-->
+    </application>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+</manifest>
