@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.LillteZheng.FlowHelper:tablibx:v1.27@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/47ba5cdccdc93571064f346adf47de87/transformed/jetified-tablibx-v1.27/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/47ba5cdccdc93571064f346adf47de87/transformed/jetified-tablibx-v1.27/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/47ba5cdccdc93571064f346adf47de87/transformed/jetified-tablibx-v1.27/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.LillteZheng.FlowHelper/tablibx/v1.27/d421ad70779a9d859aaebaf12f4eb73b4141454e/tablibx-v1.27-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

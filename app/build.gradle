@@ -77,4 +77,8 @@ dependencies {
     api 'com.github.mcxtzhang:SwipeDelMenuLayout:V1.3.0'
     //下拉框
     api 'com.github.arcadefire:nice-spinner:1.4.3'
+    implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.15'     //GIF动图
+    api 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.30'
+    implementation 'com.github.LillteZheng.FlowHelper:tablibx:v1.27'
+    implementation 'me.yokeyword:fragmentationx:1.0.2'
 }

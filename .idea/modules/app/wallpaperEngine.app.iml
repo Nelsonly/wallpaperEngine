@@ -34,6 +34,8 @@
       <sourceFolder url="file://$MODULE_DIR$/../../../app/src/main/java" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/../../../app/src/main/res" type="java-resource" />
       <sourceFolder url="file://$MODULE_DIR$/../../../app/src/test/java" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../app/build/generated/res/resValues/debug" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../app/build/generated/source/buildConfig/debug" isTestSource="false" generated="true" />
       <excludeFolder url="file://$MODULE_DIR$/../../../app/.gradle" />
       <excludeFolder url="file://$MODULE_DIR$/../../../app/build" />
     </content>
@@ -118,5 +120,9 @@
     <orderEntry type="library" name="Gradle: org.litepal.guolindev:core:3.1.1@aar" level="project" />
     <orderEntry type="library" name="Gradle: com.github.arcadefire:nice-spinner:1.4.3@aar" level="project" />
     <orderEntry type="library" name="Gradle: androidx.annotation:annotation-experimental:1.0.0@aar" level="project" />
+    <orderEntry type="library" name="Gradle: pl.droidsonroids.gif:android-gif-drawable:1.2.15@aar" level="project" />
+    <orderEntry type="library" name="Gradle: com.github.LillteZheng.FlowHelper:tablibx:v1.27@aar" level="project" />
+    <orderEntry type="library" name="Gradle: me.yokeyword:fragmentationx:1.0.2@aar" level="project" />
+    <orderEntry type="library" name="Gradle: me.yokeyword:fragmentationx-core:1.0.2@aar" level="project" />
   </component>
 </module>
