@@ -12,7 +12,7 @@ import androidx.fragment.app.Fragment;
 
 import com.irigel.common.utils.KnifeKit;
 import com.irigel.common.view.IView;
-import com.umeng.analytics.MobclickAgent;
+import com.nelson.myapplication.present.IPresent;
 
 import butterknife.Unbinder;
 
@@ -77,15 +77,12 @@ public abstract class BaseFragment<P extends IPresent>  extends Fragment impleme
     @Override
     public void onResume() {
         super.onResume();
-        MobclickAgent.onResume(getActivity());
-        MobclickAgent.onPageStart("test"); //统计页面("MainScreen"为页面名称，可自定义)
+
     }
 
     @Override
     public void onPause() {
         super.onPause();
-        MobclickAgent.onPause(getActivity());
-        MobclickAgent.onPageEnd("test");
     }
 
     @Override

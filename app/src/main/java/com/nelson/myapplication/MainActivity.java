@@ -9,6 +9,7 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.viewpager2.widget.ViewPager2;
 
 import com.nelson.myapplication.present.IPresent;
+import com.zhengsr.tablib.view.flow.TabFlowLayout;
 
 import butterknife.BindView;
 
@@ -21,11 +22,22 @@ public class MainActivity extends BaseActivity<IPresent> {
     Toolbar toolbar;
     @BindView(R.id.rectflow)
     TabFlowLayout tabFlowLayout;
+
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState, @Nullable PersistableBundle persistentState) {
         super.onCreate(savedInstanceState, persistentState);
         setContentView(R.layout.activity_main);
 
+
+    }
+
+    @Override
+    public int getLayoutId() {
+        return 0;
+    }
+
+    @Override
+    public void initData(Bundle savedInstanceState) {
 
     }
 }

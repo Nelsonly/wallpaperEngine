@@ -1,5 +1,20 @@
 package com.nelson.myapplication;
 
+import android.app.Dialog;
+import android.content.Context;
+import android.os.Bundle;
+import android.os.PersistableBundle;
+import android.view.View;
+
+import androidx.annotation.CallSuper;
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.irigel.common.utils.KnifeKit;
+import com.irigel.common.view.IView;
+import com.nelson.myapplication.present.IPresent;
+
+import butterknife.Unbinder;
+
 public abstract class BaseActivity<P extends IPresent>  extends AppCompatActivity implements IView<P> {
     private Unbinder unbinder;
     private P present;
@@ -10,20 +25,21 @@ public abstract class BaseActivity<P extends IPresent>  extends AppCompatActivit
     private Dialog mDialog;
 
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState, PersistableBundle persistentState) {
         super.onCreate(savedInstanceState);
         if (getLayoutId() > 0) {
             setContentView(getLayoutId());
         }
         this.context = this;
         initData(savedInstanceState);
-        if(getLayoutId() > 0){
+        if (getLayoutId() > 0) {
             bindUI(null);
         }
     }
 
     /**
      * 绑定UI
+     *
      * @param rootView
      */
     @CallSuper
@@ -34,6 +50,7 @@ public abstract class BaseActivity<P extends IPresent>  extends AppCompatActivit
 
     /**
      * 获取present对象
+     *
      * @return
      */
     @Override
@@ -49,6 +66,7 @@ public abstract class BaseActivity<P extends IPresent>  extends AppCompatActivit
 
     /**
      * 创建present
+     *
      * @return
      */
     @Override
@@ -59,13 +77,11 @@ public abstract class BaseActivity<P extends IPresent>  extends AppCompatActivit
     @Override
     protected void onPause() {
         super.onPause();
-        MobclickAgent.onPause(this);
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-        MobclickAgent.onResume(this);
     }
 
     @Override
@@ -78,3 +94,5 @@ public abstract class BaseActivity<P extends IPresent>  extends AppCompatActivit
         present = null;
         super.onDestroy();
     }
+
+}

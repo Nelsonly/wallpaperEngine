@@ -1,5 +1,11 @@
 package com.nelson.myapplication.present;
 
+import com.irigel.common.view.IView;
+
+import java.lang.ref.WeakReference;
+
+import io.reactivex.disposables.CompositeDisposable;
+
 public class BasePresent<V extends IView> implements IPresent<V> {
 
     private WeakReference<V> mWeakReference;
@@ -7,6 +13,7 @@ public class BasePresent<V extends IView> implements IPresent<V> {
 
     /**
      * 关联view
+     *
      * @param view
      */
     @Override
@@ -16,6 +23,7 @@ public class BasePresent<V extends IView> implements IPresent<V> {
 
     /**
      * 分离view
+     *
      * @param view
      */
     @Override
@@ -23,20 +31,21 @@ public class BasePresent<V extends IView> implements IPresent<V> {
         if (mCompositeDisposable != null) {
             mCompositeDisposable.clear();
         }
-        if (mWeakReference != null){
+        if (mWeakReference != null) {
             mWeakReference.clear();
             mWeakReference = null;
         }
-        releaseDisposable();
+
     }
 
     /**
      * 获取view
+     *
      * @return
      */
     @Override
-    public V getView(){
-        if (mWeakReference != null){
+    public V getView() {
+        if (mWeakReference != null) {
             return mWeakReference.get();
         }
         return null;
@@ -45,3 +54,4 @@ public class BasePresent<V extends IView> implements IPresent<V> {
     protected boolean isAttached() {
         return mWeakReference != null;
     }
+}
