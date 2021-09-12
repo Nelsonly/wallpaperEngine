@@ -6,7 +6,6 @@ import android.widget.RelativeLayout;
 import androidx.annotation.Nullable;
 
 import java.util.List;
-wq
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
 import com.google.android.material.imageview.ShapeableImageView;

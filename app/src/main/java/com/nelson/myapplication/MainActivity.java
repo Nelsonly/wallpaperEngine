@@ -14,7 +14,7 @@ import com.zhengsr.tablib.view.flow.TabFlowLayout;
 import butterknife.BindView;
 
 
-public class MainActivity extends BaseActivity<IPresent> {
+public class MainActivity extends AppCompatActivity {
 
     @BindView(R.id.viewpager)
     ViewPager2 viewPager2;
@@ -27,17 +27,10 @@ public class MainActivity extends BaseActivity<IPresent> {
     public void onCreate(@Nullable Bundle savedInstanceState, @Nullable PersistableBundle persistentState) {
         super.onCreate(savedInstanceState, persistentState);
         setContentView(R.layout.activity_main);
+        tabFlowLayout.setViewPager(viewPager2);
 
 
     }
 
-    @Override
-    public int getLayoutId() {
-        return 0;
-    }
 
-    @Override
-    public void initData(Bundle savedInstanceState) {
-
-    }
 }
