@@ -211,91 +211,91 @@ public class HttpRequestManager {
 
 
 
-    /**
-     * 发送下载卡通图片请求
-     *
-     * @param flowable
-     * @param callBack UI线程回调
-     * @return
-     * @throws Exception
-     */
-    public Disposable sendCartoonRequestOnUICallBack(Context context, Flowable<ResponseBody> flowable, IHttpRequstCallBack<Bitmap> callBack) {
-        if (flowable == null) {
-            return null;
-        }
-        Disposable disposable = flowable
-            .map(new Function<ResponseBody, Bitmap>() {
-                @Override
-                public Bitmap apply(@NonNull ResponseBody responseBody)  {
-                    cartCount++;
-                    //返回结果是图片
-                    if (Constants.MEDIA_TYPE_IMAGE.equals(responseBody.contentType().type())) {
-                        Bitmap bitmap = BitmapFactory.decodeStream(responseBody.byteStream());
-                        cartCount = 0;
-                        return bitmap;
-                     //返回结果是文字
-                    } else {
-                        try {
-                            String body = new String(responseBody.bytes());
-                            Log.i(TAG,"body = " + body);
-                            if(!TextUtils.isEmpty(body)){
-                                JSONObject json = new JSONObject(body);
-                                String failReason = json.optString("fail_reason");
-                                //返回文字为fail信息,回调错误信息
-                                if(!TextUtils.isEmpty(failReason)){
-                                    callBack.onFailure(new Throwable(failReason));
-                                    cartCount = 0;
-                                    return null;
-                                }
-                            }
-
-                        }catch (Exception e){
-                            e.printStackTrace();
-                        }
-                        //返回结果为文字，且非错误信息时，轮询请求
-                        if (cartCount < CARTOON_REQEUST_MAX_TRY_COUNT) {
-                            try {
-                                synchronized (lock) {
-                                    lock.wait(CARTOON_INTERVAL_WAIT_TIME);
-                                }
-                            } catch (Exception e) {
-                                e.printStackTrace();
-                            }
-                            sendCartoonRequestOnUICallBack(context,flowable, callBack);
-                        }
-                    }
-                    return null;
-                }
-            })
-            .subscribeOn(Schedulers.io())
-            //回调在子线程中执行
-            .observeOn(AndroidSchedulers.mainThread())
-            .subscribe(new Consumer<Bitmap>() {
-                @Override
-                public void accept(Bitmap result){
-                    if (callBack != null && result != null) {
-                            callBack.onSuccess(result);
-                    }
-                }
-            }, new Consumer<Throwable>() {
-                @Override
-                public void accept(Throwable throwable) {
-                    if(callBack != null){
-                        if(cartCount >= CARTOON_REQEUST_MAX_TRY_COUNT ){
-                            callBack.onFailure(new Throwable(context.getString("5")));
-                            cartCount = 0;
-                            return;
-                        }
-                        //轮询的过程reture bitmap==null 不是异常，不回调
-                        if(!throwable.getMessage().contains("The mapper function returned a null value")){
-                            callBack.onFailure(throwable);
-                        }
-                    }
-                }
-            });
-           return disposable;
-    }
-
+//    /**
+//     * 发送下载卡通图片请求
+//     *
+//     * @param flowable
+//     * @param callBack UI线程回调
+//     * @return
+//     * @throws Exception
+//     */
+//    public Disposable sendCartoonRequestOnUICallBack(Context context, Flowable<ResponseBody> flowable, IHttpRequstCallBack<Bitmap> callBack) {
+//        if (flowable == null) {
+//            return null;
+//        }
+//        Disposable disposable = flowable
+//            .map(new Function<ResponseBody, Bitmap>() {
+//                @Override
+//                public Bitmap apply(@NonNull ResponseBody responseBody)  {
+//                    cartCount++;
+//                    //返回结果是图片
+//                    if (Constants.MEDIA_TYPE_IMAGE.equals(responseBody.contentType().type())) {
+//                        Bitmap bitmap = BitmapFactory.decodeStream(responseBody.byteStream());
+//                        cartCount = 0;
+//                        return bitmap;
+//                     //返回结果是文字
+//                    } else {
+//                        try {
+//                            String body = new String(responseBody.bytes());
+//                            Log.i(TAG,"body = " + body);
+//                            if(!TextUtils.isEmpty(body)){
+//                                JSONObject json = new JSONObject(body);
+//                                String failReason = json.optString("fail_reason");
+//                                //返回文字为fail信息,回调错误信息
+//                                if(!TextUtils.isEmpty(failReason)){
+//                                    callBack.onFailure(new Throwable(failReason));
+//                                    cartCount = 0;
+//                                    return null;
+//                                }
+//                            }
+//
+//                        }catch (Exception e){
+//                            e.printStackTrace();
+//                        }
+//                        //返回结果为文字，且非错误信息时，轮询请求
+//                        if (cartCount < CARTOON_REQEUST_MAX_TRY_COUNT) {
+//                            try {
+//                                synchronized (lock) {
+//                                    lock.wait(CARTOON_INTERVAL_WAIT_TIME);
+//                                }
+//                            } catch (Exception e) {
+//                                e.printStackTrace();
+//                            }
+//                            sendCartoonRequestOnUICallBack(context,flowable, callBack);
+//                        }
+//                    }
+//                    return null;
+//                }
+//            })
+//            .subscribeOn(Schedulers.io())
+//            //回调在子线程中执行
+//            .observeOn(AndroidSchedulers.mainThread())
+//            .subscribe(new Consumer<Bitmap>() {
+//                @Override
+//                public void accept(Bitmap result){
+//                    if (callBack != null && result != null) {
+//                            callBack.onSuccess(result);
+//                    }
+//                }
+//            }, new Consumer<Throwable>() {
+//                @Override
+//                public void accept(Throwable throwable) {
+//                    if(callBack != null){
+//                        if(cartCount >= CARTOON_REQEUST_MAX_TRY_COUNT ){
+//                            callBack.onFailure(new Throwable(context.getString("5")));
+//                            cartCount = 0;
+//                            return;
+//                        }
+//                        //轮询的过程reture bitmap==null 不是异常，不回调
+//                        if(!throwable.getMessage().contains("The mapper function returned a null value")){
+//                            callBack.onFailure(throwable);
+//                        }
+//                    }
+//                }
+//            });
+//           return disposable;
+//    }
+//
 
     /**
      * 获取host
