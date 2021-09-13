@@ -1,18 +1,18 @@
-plugins {
-    id 'com.android.application'
-}
+apply plugin: 'com.android.library'
 
 android {
-    compileSdk 30
+    compileSdkVersion 28
+    buildToolsVersion "28.0.3"
+
 
     defaultConfig {
-        applicationId "com.nelson.app"
-        minSdk 28
-        targetSdk 30
+        minSdkVersion 21
+        targetSdkVersion 28
         versionCode 1
         versionName "1.0"
 
-        testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles 'consumer-rules.pro'
     }
 
     buildTypes {
@@ -21,44 +21,50 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility = 1.8
+        targetCompatibility = 1.8
     }
+
 }
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation 'androidx.appcompat:appcompat:1.2.0'
-    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
-    implementation 'org.jetbrains:annotations:15.0'
-    implementation project(path: ':common')
-    implementation project(path: ':mvplibrary')
-    implementation project(path: ':mvplibrary')
-//    implementation files('libs/Msc.jar')
-    testImplementation 'junit:junit:4.13.2'
+
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.2.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+    //在模块中添加的依赖若想在项目中使用，则implementation改成api
+    //butterknife  绑定视图依赖BindView，告别findById，不过你还得安装一个butterknife插件才行
+    api 'com.jakewharton:butterknife:10.1.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.1.0'
+    //Google Material控件,以及迁移到AndroidX下一些控件的依赖
+    //api 'com.google.android.material:material:1.0.0'
     api 'com.google.android.material:material:1.2.0'//更强
     api 'androidx.lifecycle:lifecycle-extensions:2.1.0'
     api 'androidx.annotation:annotation:1.1.0'
     api 'androidx.legacy:legacy-support-v4:1.0.0'
+
     //RecyclerView最好的适配器，让你的适配器一目了然，告别代码冗余
     api 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.30'
 
-    //butterknife  这个部分比较特殊，所以不管是模块还是项目里都要引入依赖，否则你的控件会报空对象
-    implementation 'com.jakewharton:butterknife:10.1.0'
-    annotationProcessor 'com.jakewharton:butterknife-compiler:10.1.0'
+    //图片加载框架
     api 'com.github.bumptech.glide:glide:4.10.0'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.10.0'
     //权限请求框架
+    api 'com.tbruyelle.rxpermissions2:rxpermissions:0.9.4@aar'
     api 'io.reactivex.rxjava2:rxandroid:2.0.2'
     api "io.reactivex.rxjava2:rxjava:2.0.0"
     //状态栏
     api 'com.readystatesoftware.systembartint:systembartint:1.0.3'
     //支持okhttp
-    api 'com.squareup.okhttp3:okhttp:3.8.1'
-    api 'com.squareup.retrofit2:retrofit:2.4.0'
-    api 'com.squareup.retrofit2:converter-gson:2.4.0'
-    api 'com.squareup.okhttp3:logging-interceptor:3.4.1'
+    api 'com.squareup.okhttp3:okhttp:4.6.0'
+    api 'com.squareup.retrofit2:retrofit:2.9.0'
+    api 'com.squareup.retrofit2:converter-gson:2.9.0'
+    api 'com.squareup.okhttp3:logging-interceptor:4.6.0'
     //阿里巴巴 FastJson
     api 'com.alibaba:fastjson:1.2.57'
     //下拉刷新框架
@@ -75,13 +81,9 @@ dependencies {
     //Optional: see how to use the utility.
     api 'com.ogaclejapan.smarttablayout:utils-v4:2.0.0@aar'
     //Android SQLite操作框架
-    api 'org.litepal.guolindev:core:3.1.1'
+    api 'org.litepal.guolindev:core:3.2.3'
     //列表item侧滑删除
     api 'com.github.mcxtzhang:SwipeDelMenuLayout:V1.3.0'
-    //下拉框
-    api 'com.github.arcadefire:nice-spinner:1.4.3'
-    implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.15'     //GIF动图
-    api 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.30'
-    implementation 'com.github.LillteZheng.FlowHelper:tablibx:v1.27'
-    implementation 'me.yokeyword:fragmentationx:1.0.2'
+
+
 }

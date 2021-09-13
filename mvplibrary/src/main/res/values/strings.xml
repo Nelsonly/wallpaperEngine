@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">MVP Library</string>
+    <string name="hello_blank_fragment">欢迎回来</string>
+</resources>

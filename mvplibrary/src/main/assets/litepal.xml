@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<litepal>
+    <!--数据库名称-->
+    <dbname value="NelsonWeather" />
+    <!--数据库版本-->
+    <version value="4" />
+
+    <!--数据列表  映射模型-->
+    <list>
+        <mapping class="com.nelson.mvplibrary.bean.ResidentCity"/><!--常用城市-->
+        <mapping class="com.nelson.mvplibrary.bean.Country"/><!--世界国家-->
+        <mapping class="com.nelson.mvplibrary.bean.AppVersion"/><!--App版本信息-->
+        <mapping class="com.nelson.mvplibrary.bean.WallPaper"/><!--壁纸数据-->
+        <mapping class="com.nelson.mvplibrary.bean.CountryScore"/>
+        <mapping class="com.nelson.mvplibrary.bean.KeyScore"/>
+
+    </list>
+
+</litepal>

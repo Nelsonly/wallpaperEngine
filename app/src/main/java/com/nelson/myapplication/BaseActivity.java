@@ -11,7 +11,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.irigel.common.utils.KnifeKit;
 import com.irigel.common.view.IView;
-import com.nelson.myapplication.present.IPresent;
 
 import butterknife.Unbinder;
 

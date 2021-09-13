@@ -7,11 +7,12 @@ import android.view.View;
 import android.widget.TextView;
 
 import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.viewpager2.widget.ViewPager2;
 
-import com.nelson.myapplication.present.IPresent;
+import com.nelson.mvplibrary.mvp.MvpActivity;
+import com.nelson.myapplication.bean.AndroidWallpaperBean;
+import com.nelson.myapplication.present.MainContract;
 import com.zhengsr.tablib.view.adapter.TabFlowAdapter;
 import com.zhengsr.tablib.view.flow.TabFlowLayout;
 import com.nelson.myapplication.adapter.DateAdapter;
@@ -19,9 +20,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;
+import retrofit2.Response;
 
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends MvpActivity<MainContract.MainPresent> implements MainContract.IMainView {
 
     @BindView(R.id.viewpager)
     ViewPager2 mViewPager;
@@ -30,16 +32,35 @@ public class MainActivity extends AppCompatActivity {
     @BindView(R.id.rectflow)
     TabFlowLayout flowLayout;
     List<WallpaperFragment> mFragments = new ArrayList<>();
-    @Override
-    public void onCreate(@Nullable Bundle savedInstanceState, @Nullable PersistableBundle persistentState) {
-        super.onCreate(savedInstanceState, persistentState);
-        setContentView(R.layout.activity_main);
 
-        for (int i = 0; i < 15; i++) {
-            mFragments.add(WallpaperFragment.newInStance());
+    @Override
+    public void initData(Bundle savedInstanceState) {
+
+        for (int i = 0; i < 1; i++) {
+            mFragments.add(WallpaperFragment.newInStance("Shh"));
         }
         mViewPager.setOffscreenPageLimit(6);
         mViewPager.setAdapter(new DateAdapter(getSupportFragmentManager(), getLifecycle(),mFragments));
+
+    }
+
+    @Override
+    protected MainContract.MainPresent createPresent() {
+        return new MainContract.MainPresent();
+    }
+
+    @Override
+    public void getAndroidWallpaperResult(Response<AndroidWallpaperBean> androidWallpaperBeanResponse) {
+
+    }
+
+    @Override
+    public int getLayoutId() {
+        return R.layout.activity_main;
+    }
+
+    @Override
+    public void getDataFailed() {
 
     }
 
