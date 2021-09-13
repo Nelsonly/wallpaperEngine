@@ -61,4 +61,14 @@ public class WallpaperFragment extends Fragment {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_wallpaper, container, false);
     }
+    /**
+     * 弄一个静态工厂的方法调用 用于传参
+     *
+     * @param
+     * @return
+     */
+    public static WallpaperFragment newInStance() {
+        return new WallpaperFragment();
+    }
+
 }

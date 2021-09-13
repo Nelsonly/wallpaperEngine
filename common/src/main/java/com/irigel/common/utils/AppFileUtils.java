@@ -4,6 +4,7 @@ package com.irigel.common.utils;
 import android.content.Context;
 import android.os.Environment;
 
+import com.irigel.common.Constants;
 import com.irigel.common.R;
 
 import android.content.ContentUris;
@@ -12,8 +13,22 @@ import android.net.Uri;
 import android.os.Build;
 import android.provider.DocumentsContract;
 import android.provider.MediaStore;
+import android.util.Log;
 
+import java.io.BufferedInputStream;
+import java.io.BufferedOutputStream;
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.OutputStream;
+import java.util.Enumeration;
+import java.util.zip.ZipEntry;
+import java.util.zip.ZipFile;
+import java.util.zip.ZipInputStream;
 
 /**
  * 文件相关工具
@@ -55,6 +70,195 @@ public class AppFileUtils {
         }
 
     }
+
+    /**
+     * 删除单个文件
+     *@param filePath 要删除的文件所在路径
+     * @param fileName 要删除的文件的文件名
+     * @return 单个文件删除成功返回true，否则返回false
+     */
+    public static boolean deleteFile(String filePath,String fileName) {
+        File file = new File(filePath,fileName);
+        // 如果文件路径所对应的文件存在，并且是一个文件，则直接删除
+        if (file.exists() && file.isFile()) {
+            if (file.delete()) {
+                return true;
+            } else {
+                return false;
+            }
+        } else {
+            return false;
+        }
+    }
+
+    /**
+     * 保存文件到本地
+     * @param in
+     * @param savePath 路径名
+     * @param fileName 文件名
+     * @return 状态码 0:success   -1：failure
+     */
+    public static int saveFile(InputStream in,String savePath, String fileName){
+        if(in == null){
+            return -1;
+        }
+        byte[] buf = new byte[1024];
+        int len = 0;
+        FileOutputStream fos = null;
+
+        try {
+
+            File fileDir = new File(savePath);
+            if(!fileDir.exists()){
+                fileDir.mkdirs();
+            }
+            File file = new File(savePath,fileName);
+            fos = new FileOutputStream(file);
+
+            while ((len = in.read(buf)) != -1) {
+                fos.write(buf, 0, len);
+
+            }
+            fos.flush();
+        } catch (Exception e) {
+            e.printStackTrace();
+            return 0;
+        } finally {
+            try {
+                if (in != null){
+                    in.close();
+                }
+
+            } catch (IOException e) {
+                return -1;
+            }
+            try {
+                if (fos != null) {
+                    fos.close();
+                }
+            } catch (IOException e) {
+                return -1;
+            }
+        }
+        return 0;
+    }
+
+    //读取文本文件中的内容
+    public static String readTxtFile(String filePath, String fileName) {
+        String path = filePath;
+        String content = ""; //文件内容字符串
+        //打开文件
+        File file = new File(path, fileName);
+        //如果path是传递过来的参数，可以做一个非目录的判断
+        InputStream instream = null;
+        if (!file.isDirectory()) {
+            try {
+                instream = new FileInputStream(file);
+                if (instream != null) {
+                    InputStreamReader inputreader = new InputStreamReader(instream);
+                    BufferedReader buffreader = new BufferedReader(inputreader);
+                    String line;
+                    //分行读取
+                    while ((line = buffreader.readLine()) != null) {
+                        content += line + "\n";
+
+                    }
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+            }finally {
+                try
+                {
+                    if(instream != null){
+                        instream.close();
+                    }
+                }catch (Exception e){
+                    e.printStackTrace();
+                }
+            }
+        }
+
+        return content;
+    }
+
+
+
+    /**
+     * 解压缩文件
+     *
+     * @param zipFile    压缩包文件
+     * @param folderPath 解压缩后文件存放路径
+     * @return @return 状态码 0:success   -1：failure
+     */
+    public static int unZipFile(File zipFile, String folderPath) {
+        OutputStream os = null;
+        InputStream is = null;
+        ZipFile zfile = null;
+        FileOutputStream out = null;
+        try {
+            zfile = new ZipFile(zipFile);
+            Enumeration zList = zfile.entries();
+            ZipEntry ze = null;
+            byte[] buf = new byte[1024];
+            while (zList.hasMoreElements()) {
+
+                ze = (ZipEntry) zList.nextElement();
+                String dirstr;
+                if (ze.isDirectory()) {
+                    dirstr = folderPath + "/" + ze.getName();
+                    dirstr.trim();
+                    File f = new File(dirstr);
+                    f.mkdirs();
+                    continue;
+                }
+                File file = new File(folderPath, ze.getName());
+
+                out = new FileOutputStream(file);
+                os = new BufferedOutputStream(out);
+                is = new BufferedInputStream(zfile.getInputStream(ze));
+                int len = 0;
+                while ((len = is.read(buf, 0, 1024)) != -1) {
+                    os.write(buf, 0, len);
+                }
+                out.flush();
+                os.flush();
+            }
+
+
+        } catch (IOException e) {
+            e.printStackTrace();
+            return -1;
+        } finally {
+            try {
+                if (zfile != null) {
+                    zfile.close();
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+                return -1;
+            }
+            try {
+                if (is != null) {
+                    is.close();
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+                return -1;
+            }
+
+            try {
+                if (os != null) {
+                    os.close();
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+                return -1;
+            }
+        }
+
+        return 0;
+    }
+
 
     /**
      * 根据uri 获取文件路径

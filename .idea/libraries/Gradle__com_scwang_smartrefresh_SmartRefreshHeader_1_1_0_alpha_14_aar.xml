@@ -2,11 +2,15 @@
   <library name="Gradle: com.scwang.smartrefresh:SmartRefreshHeader:1.1.0-alpha-14@aar">
     <ANNOTATIONS>
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/8e16371ffdd488c9608dba89fb6ada0a/transformed/jetified-SmartRefreshHeader-1.1.0-alpha-14/annotations.zip!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/a75015023763ea3b848a12921717c7c2/transformed/jetified-SmartRefreshHeader-1.1.0-alpha-14/annotations.zip!/" />
     </ANNOTATIONS>
     <CLASSES>
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/8e16371ffdd488c9608dba89fb6ada0a/transformed/jetified-SmartRefreshHeader-1.1.0-alpha-14/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/8e16371ffdd488c9608dba89fb6ada0a/transformed/jetified-SmartRefreshHeader-1.1.0-alpha-14/res" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/8e16371ffdd488c9608dba89fb6ada0a/transformed/jetified-SmartRefreshHeader-1.1.0-alpha-14/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/a75015023763ea3b848a12921717c7c2/transformed/jetified-SmartRefreshHeader-1.1.0-alpha-14/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/a75015023763ea3b848a12921717c7c2/transformed/jetified-SmartRefreshHeader-1.1.0-alpha-14/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/a75015023763ea3b848a12921717c7c2/transformed/jetified-SmartRefreshHeader-1.1.0-alpha-14/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.scwang.smartrefresh/SmartRefreshHeader/1.1.0-alpha-14/e8ca23c9d2da2978503c809603e834eacfcfde16/SmartRefreshHeader-1.1.0-alpha-14-javadoc.jar!/" />

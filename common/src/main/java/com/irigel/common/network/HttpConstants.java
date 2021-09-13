@@ -9,6 +9,10 @@ public class HttpConstants {
     public static final String HEADER_ACCESS_KEY = "ak";
     public static final String TAG_MODE_HOST = "modeHost";
     public static final String TAG_UNSPLASH_HOST = "unSplashHost";
+    public static final String TAG_MODE_ZIP_HOST = "modeZipHost";
+    public static final String TAG_CARTOON_HOST = "cartoonHost";
+    public static final int MODEL_API_VERSION = 2; //模板接口版本
+
 
     /**
      * Host
@@ -16,6 +20,7 @@ public class HttpConstants {
     public static final class OnLineUrl {
         public static final String UNSPLASH_HOST = "https://api.unsplash.com/";
         public static final String MODE_HOST = "https://fig-service.atcloudbox.com/";
+        public static final String FLASH_HOST = "http://69.231.163.245:8500/";
     }
 
     /**
@@ -23,6 +28,7 @@ public class HttpConstants {
      */
     public static final class DevUrl {
         public static final String MODE_HOST = "http://52.83.76.155:8136/";
+        public static final String FLASH_HOST = "http://69.231.163.245:8500/";
     }
 
     /**
@@ -44,6 +50,10 @@ public class HttpConstants {
         public static final String PAGE = "page";
         public static final String PAGE_SIZE = "per_page";
         public static final String CLIENTID = "client_id";
+        public static final String FILE = "file";
+        public static final String PROCESS_TYPE = "process_type";
+        public static final String PROCESS_NAME = "process_name";
+        public static final String PARAMS = "params";
     }
 
     /**

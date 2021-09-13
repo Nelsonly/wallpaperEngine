@@ -4,6 +4,9 @@
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/6f6c14b3ee35be95b447bf9a7c602a76/transformed/jetified-nice-spinner-1.4.3/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/6f6c14b3ee35be95b447bf9a7c602a76/transformed/jetified-nice-spinner-1.4.3/res" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/6f6c14b3ee35be95b447bf9a7c602a76/transformed/jetified-nice-spinner-1.4.3/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/1d160ba74d925d8ad670573a9f63a77c/transformed/jetified-nice-spinner-1.4.3/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/1d160ba74d925d8ad670573a9f63a77c/transformed/jetified-nice-spinner-1.4.3/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/1d160ba74d925d8ad670573a9f63a77c/transformed/jetified-nice-spinner-1.4.3/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

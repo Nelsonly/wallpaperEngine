@@ -10,19 +10,19 @@ import okhttp3.logging.HttpLoggingInterceptor;
  * @date 2/20/21
  * okhttpClient封装类
  */
-public class OkHttpClientWrapper {
+public class OkHttpClientManager {
 
     private OkHttpClient okHttpClient;
 
-    private static class OkHttpClientWrapperHolder{
-        private static final OkHttpClientWrapper INSTANCE = new OkHttpClientWrapper();
+    private static class OkHttpClientManagerHolder {
+        private static final OkHttpClientManager INSTANCE = new OkHttpClientManager();
     }
 
-    private OkHttpClientWrapper(){
+    private OkHttpClientManager(){
         if (okHttpClient == null) {
             okHttpClient = createOkHttpBuilder()
-                .addInterceptor(new MulRetryInterceptor(3))
-                .build();
+            .addInterceptor(new MulRetryInterceptor(3))
+            .build();
         }
     }
 
@@ -30,8 +30,8 @@ public class OkHttpClientWrapper {
      * 返回封装单例对象
      * @return
      */
-    public static OkHttpClientWrapper getInstance(){
-        return OkHttpClientWrapperHolder.INSTANCE;
+    public static OkHttpClientManager getInstance(){
+        return OkHttpClientManagerHolder.INSTANCE;
     }
 
     /**

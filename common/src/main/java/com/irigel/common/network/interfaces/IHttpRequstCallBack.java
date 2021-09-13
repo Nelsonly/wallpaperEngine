@@ -1,5 +1,7 @@
 package com.irigel.common.network.interfaces;
 
+import java.io.FileNotFoundException;
+
 /**
  *
  * @author zhangqing
@@ -13,7 +15,7 @@ public interface IHttpRequstCallBack <T> {
     void onSuccess(T result);
     /**
      * 请求失败回调
-     * @param exception 错误异常对象
+     * @param exception 错误异常信息
      */
     void onFailure(Throwable exception);
 }
