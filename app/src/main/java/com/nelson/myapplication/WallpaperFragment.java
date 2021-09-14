@@ -23,6 +23,7 @@ public class WallpaperFragment extends BaseFragment {
     private static String chose ;
     @BindView(R.id.recycleView)
     RecyclerView recyclerView;
+    WallpaperAdapter wallpaperAdapter;
     public WallpaperFragment() {
         // Required empty public constructor
     }
@@ -52,7 +53,20 @@ public class WallpaperFragment extends BaseFragment {
         return new WallpaperFragment();
     }
     public void setImgUrl(List<String> imgUrls){
-        recyclerView.setAdapter(new WallpaperAdapter(R.layout.item_image_list,imgUrls));
+        wallpaperAdapter = new WallpaperAdapter(R.layout.item_image_list,imgUrls)
+
+        wallpaperAdapter.setOnItemChildClickListener(new BaseQuickAdapter.OnItemChildClickListener() {
+            @Override
+            public void onItemChildClick(BaseQuickAdapter adapter, View view, int position) {
+                //这里的列表数据实际上有32条，有两条假数据，就是首尾这两条，所以点击的时候要做判断处理
+                    Intent intent = new Intent(context, ImageActivity.class);
+                    intent.putExtra("position", position - 1);
+                    startActivity(intent);
+            }
+        });
+
+        recyclerView.setAdapter(wallpaperAdapter);
+
     }
 
 }
