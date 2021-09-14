@@ -37,10 +37,22 @@ public class WallpaperFragment extends BaseFragment {
     @Override
     public void initData(Bundle savedInstanceState) {
 //        recyclerView.setAdapter(new WallpaperAdapter(R.layout.item_image_list));
+        wallpaperAdapter = new WallpaperAdapter(R.layout.item_wallpaper_list,imgUrls);
+        wallpaperAdapter.setOnItemChildClickListener(new BaseQuickAdapter.OnItemChildClickListener() {
+            @Override
+            public void onItemChildClick(BaseQuickAdapter adapter, View view, int position) {
+                //这里的列表数据实际上有32条，有两条假数据，就是首尾这两条，所以点击的时候要做判断处理
+                Intent intent = new Intent(context, ImageActivity.class);
+                intent.putExtra("position", position - 1);
+                intent.putStringArrayListExtra("ImageUrl", (ArrayList<String>) imgUrls);
+                startActivity(intent);
+            }
+        });
+
         StaggeredGridLayoutManager manager = new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL);
         //设置布局管理
         recyclerView.setLayoutManager(manager);
-
+        recyclerView.setAdapter(wallpaperAdapter);
     }
 
     @Override
@@ -59,21 +71,8 @@ public class WallpaperFragment extends BaseFragment {
     }
     public void setImgUrl(List<String> imgUrls){
         this.imgUrls = imgUrls;
-        wallpaperAdapter = new WallpaperAdapter(R.layout.item_wallpaper_list,imgUrls);
-
-        wallpaperAdapter.setOnItemChildClickListener(new BaseQuickAdapter.OnItemChildClickListener() {
-            @Override
-            public void onItemChildClick(BaseQuickAdapter adapter, View view, int position) {
-                //这里的列表数据实际上有32条，有两条假数据，就是首尾这两条，所以点击的时候要做判断处理
-                    Intent intent = new Intent(context, ImageActivity.class);
-                    intent.putExtra("position", position - 1);
-                    intent.putStringArrayListExtra("ImageUrl", (ArrayList<String>) imgUrls);
-                    startActivity(intent);
-            }
-        });
-
-        recyclerView.setAdapter(wallpaperAdapter);
-
+        wallpaperAdapter.setNewData(imgUrls);
+        wallpaperAdapter.notifyDataSetChanged();
     }
 
 }

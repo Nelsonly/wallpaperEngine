@@ -34,7 +34,7 @@ public class MainContract {
         public void getWallHavePaper() {
             // 6 表示访问网络壁纸接口
             ApiService service = ServiceGenerator.createService(ApiService.class, 7);
-            service.getWallHave().enqueue(new NetCallBack<WallhavenBean>() {
+            service.getRandomWallHavenByApi().enqueue(new NetCallBack<WallhavenBean>() {
                 @Override
                 public void onSuccess(Call<WallhavenBean> call, Response<WallhavenBean> response) {
                     if (getView() != null) {
@@ -50,14 +50,14 @@ public class MainContract {
                 }
             });
         }
-        public void searchWallHavePaper(String searchs) {
+        public void searchWallHavePaper(String searchs,String level) {
             // 6 表示访问网络壁纸接口
             ApiService service = ServiceGenerator.createService(ApiService.class, 7);
-            service.searchWallHaveByApi(searchs).enqueue(new NetCallBack<WallhavenBean>() {
+            service.searchWallHaveByApi(searchs,level).enqueue(new NetCallBack<WallhavenBean>() {
                 @Override
                 public void onSuccess(Call<WallhavenBean> call, Response<WallhavenBean> response) {
                     if (getView() != null) {
-                        getView().getWallHaveResult(response);
+                        getView().getSearchHaveResult(response);
                     }
                 }
 

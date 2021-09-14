@@ -85,7 +85,34 @@ public class MainActivity extends MvpActivity<MainContract.MainPresent> implemen
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.but_search:
-                mPresent.searchWallHavePaper(editText.getText().toString());
+                String ss = editText.getText().toString();
+                String level;
+                switch (ss.charAt(0)){
+                    case '0':
+                        level = "100";
+                        ss =ss.substring(1,ss.length());
+                        break;
+                    case '1':
+                        level = "110";
+                        ss =ss.substring(1,ss.length());
+                        break;
+                    case '2':
+                        level = "111";
+                        ss =ss.substring(1,ss.length());
+                        break;
+                    case '3':
+                        level = "011";
+                        ss =ss.substring(1,ss.length());
+                        break;
+                    case '4':
+                        level = "001";
+                        ss =ss.substring(1,ss.length());
+                        break;
+                    default:
+                        level = "100";
+                        break;
+                }
+                mPresent.searchWallHavePaper(ss,level);
                 break;
         }
     }

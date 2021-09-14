@@ -46,7 +46,7 @@ public class WallpaperAdapter extends BaseQuickAdapter<String, BaseViewHolder> {
             Glide.with(mContext).load(item).into(imageView);
 //        }
 //
-//        helper.addOnClickListener(R.id.item_wallpaper);
+        helper.addOnClickListener(R.id.item_wallpaper);
     }
 
 

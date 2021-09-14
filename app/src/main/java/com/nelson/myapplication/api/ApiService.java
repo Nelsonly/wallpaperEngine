@@ -35,12 +35,12 @@ public interface ApiService {
     @GET("/api/v1/search")
     Call<WallhavenBean> getWallHave();
 
-    @GET("/api/v1/search?apikey="+WallHaveAPiKey+"&purity=0")
-    Call<WallhavenBean> searchWallHaveByApi(@Query("p") String search);
+    @GET("/api/v1/search?apikey="+WallHaveAPiKey)
+    Call<WallhavenBean> searchWallHaveByApi(@Query("q") String search,@Query("purity") String level);
 
-    @GET("/api/v1/search?apikey="+WallHaveAPiKey+"&purity=0")
-    Call<WallhavenBean> getWallHaveByApi();
+    @GET("/api/v1/search?apikey="+WallHaveAPiKey)
+    Call<WallhavenBean> getWallHaveByApi(@Query("purity") String level);
 
-    @GET("/api/v1/search?apikey="+WallHaveAPiKey+"&purity=0"+"&sorting=random")
+    @GET("/api/v1/search?apikey="+WallHaveAPiKey+"&purity=001"+"&sorting=random")
     Call<WallhavenBean> getRandomWallHavenByApi();
 }
