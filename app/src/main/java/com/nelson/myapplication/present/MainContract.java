@@ -50,13 +50,32 @@ public class MainContract {
                 }
             });
         }
+        public void searchWallHavePaper(String searchs) {
+            // 6 表示访问网络壁纸接口
+            ApiService service = ServiceGenerator.createService(ApiService.class, 7);
+            service.searchWallHaveByApi(searchs).enqueue(new NetCallBack<WallhavenBean>() {
+                @Override
+                public void onSuccess(Call<WallhavenBean> call, Response<WallhavenBean> response) {
+                    if (getView() != null) {
+                        getView().getWallHaveResult(response);
+                    }
+                }
 
+                @Override
+                public void onFailed() {
+                    if (getView() != null) {
+                        getView().getDataFailed();
+                    }
+                }
+            });
+        }
 
 
     }
     public interface  IMainView extends BaseView{
         void getAndroidWallpaperResult(Response<AndroidWallpaperBean> androidWallpaperBeanResponse);
         void getWallHaveResult(Response<WallhavenBean> wallhavenBeanResponse);
+        void getSearchHaveResult(Response<WallhavenBean> wallhavenBeanResponse);
         void getDataFailed();
 
     }

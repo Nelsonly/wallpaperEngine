@@ -14,29 +14,43 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
 
+            <EditText
+                android:id="@+id/search_text"
+                android:layout_width="278dp"
+                android:layout_height="match_parent"
+                android:hint="search- - - - - - - - - -"
+                android:inputType="text"
+                android:lines="1"
+                android:textSize="20dp" />
+            <Button
+                android:id="@+id/but_search"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:text="search"
+                />
+
+            <com.zhengsr.tablib.view.flow.TabFlowLayout
+                android:id="@+id/rectflow"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                app:tab_color="#FFA6A6"
+                app:tab_height="3dp"
+                app:tab_item_autoScale="true"
+                app:tab_scale_factor="1.1"
+                app:tab_type="rect"
+                app:tab_width="20dp" />
+        </LinearLayout>
     </androidx.appcompat.widget.Toolbar>
-
-    <com.zhengsr.tablib.view.flow.TabFlowLayout
-        android:id="@+id/rectflow"
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        app:tab_color="#FFA6A6"
-        app:tab_height="3dp"
-        app:tab_item_autoScale="true"
-        app:tab_scale_factor="1.1"
-        app:tab_type="rect"
-        app:tab_width="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/toolbar"
-        />
 
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/viewpager"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
-
-        app:layout_constraintTop_toBottomOf="@id/rectflow" />
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
 </androidx.constraintlayout.widget.ConstraintLayout>

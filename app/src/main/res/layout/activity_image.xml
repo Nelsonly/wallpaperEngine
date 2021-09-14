@@ -1,9 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".ImageActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/vp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <!--返回按钮-->
+    <ImageView
+        android:id="@+id/iv_back"
+        android:layout_width="@dimen/dp_50"
+        android:layout_height="@dimen/dp_50"
+        android:layout_marginLeft="@dimen/dp_12"
+        android:layout_marginTop="@dimen/dp_30"
+        android:padding="@dimen/dp_8"
+        android:background="@drawable/selector_bg_img"
+        android:src="@drawable/icon_image_return_white" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/dp_12"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <!--设为壁纸-->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_setting_wallpaper"
+            style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+            android:layout_width="@dimen/dp_100"
+            android:layout_height="@dimen/dp_32"
+            android:layout_marginRight="@dimen/dp_6"
+            android:insetTop="@dimen/dp_0"
+            android:insetBottom="@dimen/dp_0"
+            android:text="设为壁纸"
+            android:theme="@style/Theme.MaterialComponents.Light.NoActionBar"
+            app:backgroundTint="@color/white_2"
+            app:cornerRadius="@dimen/dp_16"
+            app:strokeColor="@color/white"
+            app:strokeWidth="@dimen/dp_1" />
+        <!--下载壁纸-->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_download"
+            style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+            android:layout_width="@dimen/dp_100"
+            android:layout_height="@dimen/dp_32"
+            android:layout_marginLeft="@dimen/dp_6"
+            android:insetTop="@dimen/dp_0"
+            android:insetBottom="@dimen/dp_0"
+            android:text="下载壁纸"
+            android:theme="@style/Theme.MaterialComponents.Light.NoActionBar"
+            app:backgroundTint="@color/about_bg_color"
+            app:cornerRadius="@dimen/dp_16" />
+    </LinearLayout>
+
+
+
+</RelativeLayout>

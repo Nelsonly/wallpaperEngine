@@ -7,7 +7,8 @@ import retrofit2.http.Path;
 import retrofit2.http.Query;
 
 import com.nelson.myapplication.bean.WallhavenBean;
-import  com.nelson.myapplication.bean.AndroidWallpaperBean;
+import com.nelson.myapplication.bean.AndroidWallpaperBean;
+import static com.nelson.myapplication.Constant.WallHaveAPiKey;
 /**
  * API服务接口
  *
@@ -33,4 +34,13 @@ public interface ApiService {
 
     @GET("/api/v1/search")
     Call<WallhavenBean> getWallHave();
+
+    @GET("/api/v1/search?apikey="+WallHaveAPiKey+"&purity=0")
+    Call<WallhavenBean> searchWallHaveByApi(@Query("p") String search);
+
+    @GET("/api/v1/search?apikey="+WallHaveAPiKey+"&purity=0")
+    Call<WallhavenBean> getWallHaveByApi();
+
+    @GET("/api/v1/search?apikey="+WallHaveAPiKey+"&purity=0"+"&sorting=random")
+    Call<WallhavenBean> getRandomWallHavenByApi();
 }

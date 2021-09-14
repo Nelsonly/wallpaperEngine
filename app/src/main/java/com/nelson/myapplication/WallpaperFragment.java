@@ -1,14 +1,18 @@
 package com.nelson.myapplication;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
+import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.nelson.mvplibrary.base.BaseFragment;
 import com.nelson.myapplication.adapter.WallpaperAdapter;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;
@@ -24,6 +28,7 @@ public class WallpaperFragment extends BaseFragment {
     @BindView(R.id.recycleView)
     RecyclerView recyclerView;
     WallpaperAdapter wallpaperAdapter;
+    List<String> imgUrls = new ArrayList<>();
     public WallpaperFragment() {
         // Required empty public constructor
     }
@@ -53,7 +58,8 @@ public class WallpaperFragment extends BaseFragment {
         return new WallpaperFragment();
     }
     public void setImgUrl(List<String> imgUrls){
-        wallpaperAdapter = new WallpaperAdapter(R.layout.item_image_list,imgUrls)
+        this.imgUrls = imgUrls;
+        wallpaperAdapter = new WallpaperAdapter(R.layout.item_wallpaper_list,imgUrls);
 
         wallpaperAdapter.setOnItemChildClickListener(new BaseQuickAdapter.OnItemChildClickListener() {
             @Override
@@ -61,6 +67,7 @@ public class WallpaperFragment extends BaseFragment {
                 //这里的列表数据实际上有32条，有两条假数据，就是首尾这两条，所以点击的时候要做判断处理
                     Intent intent = new Intent(context, ImageActivity.class);
                     intent.putExtra("position", position - 1);
+                    intent.putStringArrayListExtra("ImageUrl", (ArrayList<String>) imgUrls);
                     startActivity(intent);
             }
         });
