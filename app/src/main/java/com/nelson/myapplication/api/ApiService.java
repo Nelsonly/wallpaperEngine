@@ -41,6 +41,6 @@ public interface ApiService {
     @GET("/api/v1/search?apikey="+WallHaveAPiKey)
     Call<WallhavenBean> getWallHaveByApi(@Query("purity") String level);
 
-    @GET("/api/v1/search?apikey="+WallHaveAPiKey+"&purity=001"+"&sorting=random")
+    @GET("/api/v1/search?apikey="+WallHaveAPiKey+"&purity=110"+"&sorting=random")
     Call<WallhavenBean> getRandomWallHavenByApi();
 }

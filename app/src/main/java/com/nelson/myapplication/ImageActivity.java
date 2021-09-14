@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager2.widget.ViewPager2;
 
 import android.app.Activity;
+import android.app.WallpaperManager;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -64,6 +65,7 @@ public class ImageActivity extends BaseActivity {
     @Override
     public void initData(Bundle savedInstanceState) {
         showLoadingDialog();
+        manager = WallpaperManager.getInstance(this);
         //透明状态栏
         StatusBarUtil.transparencyBar(context);
         //获取位置
@@ -104,6 +106,7 @@ public class ImageActivity extends BaseActivity {
         return R.layout.activity_image;
     }
 
+    WallpaperManager manager;
 
     @OnClick({R.id.iv_back, R.id.btn_setting_wallpaper, R.id.btn_download})
     public void onViewClicked(View view) {
@@ -113,10 +116,11 @@ public class ImageActivity extends BaseActivity {
                 break;
             //设置壁纸
             case R.id.btn_setting_wallpaper:
-                //放入缓存
-                SPUtils.putString(Constant.WALLPAPER_URL, wallpaperUrl, context);
-                //壁纸列表
-                SPUtils.putInt(Constant.WALLPAPER_TYPE, 1, context);
+                try {
+                    manager.setBitmap(bitmap, null, false, WallpaperManager.FLAG_SYSTEM);
+                }catch (IOException e){
+                    e.printStackTrace();
+                }
                 ToastUtil.showShortToast(context, "已设置");
                 break;
             //下载壁纸
