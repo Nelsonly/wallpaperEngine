@@ -58,7 +58,7 @@ public class ServiceGenerator {
                 BASE_URL = "http://service.picasso.adesk.com";
                 break;
             case 7:
-                BASE_URL = "http://192.168.238.126:5000/";
+                BASE_URL = "https://wallhaven.cc";
                 break;
             default:
                 break;

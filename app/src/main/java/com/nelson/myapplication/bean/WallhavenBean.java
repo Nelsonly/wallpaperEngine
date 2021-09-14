@@ -8,113 +8,194 @@ import java.util.List;
 public class WallhavenBean {
 
     /**
-     * data : [{"id":"8orw61","url":"https://wallhaven.cc/w/8orw61","short_url":"https://whvn.cc/8orw61","views":4,"favorites":0,"source":"","purity":"sfw","category":"anime","dimension_x":1700,"dimension_y":1107,"resolution":"1700x1107","ratio":"1.54","file_size":1798111,"file_type":"image/png","created_at":"2021-09-13 12:12:54","colors":["#ffffff","#cccccc","#424153","#e7d8b1","#999999"],"path":"https://w.wallhaven.cc/full/8o/wallhaven-8orw61.png","thumbs":{"large":"https://th.wallhaven.cc/lg/8o/8orw61.jpg","original":"https://th.wallhaven.cc/orig/8o/8orw61.jpg","small":"https://th.wallhaven.cc/small/8o/8orw61.jpg"}},{"id":"l32ovq","url":"https://wallhaven.cc/w/l32ovq","short_url":"https://whvn.cc/l32ovq","views":5,"favorites":1,"source":"","purity":"sfw","category":"anime","dimension_x":2454,"dimension_y":1629,"resolution":"2454x1629","ratio":"1.51","file_size":4492991,"file_type":"image/png","created_at":"2021-09-13 12:12:53","colors":["#000000","#424153","#333399","#0066cc","#0099cc"],"path":"https://w.wallhaven.cc/full/l3/wallhaven-l32ovq.png","thumbs":{"large":"https://th.wallhaven.cc/lg/l3/l32ovq.jpg","original":"https://th.wallhaven.cc/orig/l3/l32ovq.jpg","small":"https://th.wallhaven.cc/small/l3/l32ovq.jpg"}},{"id":"dpwz2j","url":"https://wallhaven.cc/w/dpwz2j","short_url":"https://whvn.cc/dpwz2j","views":6,"favorites":1,"source":"","purity":"sfw","category":"anime","dimension_x":3508,"dimension_y":3508,"resolution":"3508x3508","ratio":"1","file_size":8309524,"file_type":"image/jpeg","created_at":"2021-09-13 12:12:51","colors":["#ffffff","#abbcda","#424153","#999999","#cccccc"],"path":"https://w.wallhaven.cc/full/dp/wallhaven-dpwz2j.jpg","thumbs":{"large":"https://th.wallhaven.cc/lg/dp/dpwz2j.jpg","original":"https://th.wallhaven.cc/orig/dp/dpwz2j.jpg","small":"https://th.wallhaven.cc/small/dp/dpwz2j.jpg"}},{"id":"283x5g","url":"https://wallhaven.cc/w/283x5g","short_url":"https://whvn.cc/283x5g","views":4,"favorites":0,"source":"","purity":"sfw","category":"general","dimension_x":2688,"dimension_y":1512,"resolution":"2688x1512","ratio":"1.78","file_size":976132,"file_type":"image/jpeg","created_at":"2021-09-13 12:05:19","colors":["#0066cc","#abbcda","#ffffff","#993399","#cccccc"],"path":"https://w.wallhaven.cc/full/28/wallhaven-283x5g.jpg","thumbs":{"large":"https://th.wallhaven.cc/lg/28/283x5g.jpg","original":"https://th.wallhaven.cc/orig/28/283x5g.jpg","small":"https://th.wallhaven.cc/small/28/283x5g.jpg"}},{"id":"wqmkvp","url":"https://wallhaven.cc/w/wqmkvp","short_url":"https://whvn.cc/wqmkvp","views":5,"favorites":0,"source":"","purity":"sfw","category":"general","dimension_x":1920,"dimension_y":1080,"resolution":"1920x1080","ratio":"1.78","file_size":56426,"file_type":"image/jpeg","created_at":"2021-09-13 11:55:35","colors":["#000000","#424153","#996633","#660000","#ffff00"],"path":"https://w.wallhaven.cc/full/wq/wallhaven-wqmkvp.jpg","thumbs":{"large":"https://th.wallhaven.cc/lg/wq/wqmkvp.jpg","original":"https://th.wallhaven.cc/orig/wq/wqmkvp.jpg","small":"https://th.wallhaven.cc/small/wq/wqmkvp.jpg"}},{"id":"dpwzml","url":"https://wallhaven.cc/w/dpwzml","short_url":"https://whvn.cc/dpwzml","views":6,"favorites":1,"source":"","purity":"sfw","category":"general","dimension_x":1920,"dimension_y":1080,"resolution":"1920x1080","ratio":"1.78","file_size":244496,"file_type":"image/jpeg","created_at":"2021-09-13 11:36:17","colors":["#000000","#66cccc","#ea4c88","#424153","#999999"],"path":"https://w.wallhaven.cc/full/dp/wallhaven-dpwzml.jpg","thumbs":{"large":"https://th.wallhaven.cc/lg/dp/dpwzml.jpg","original":"https://th.wallhaven.cc/orig/dp/dpwzml.jpg","small":"https://th.wallhaven.cc/small/dp/dpwzml.jpg"}},{"id":"283xjm","url":"https://wallhaven.cc/w/283xjm","short_url":"https://whvn.cc/283xjm","views":5,"favorites":2,"source":"","purity":"sfw","category":"general","dimension_x":2560,"dimension_y":1440,"resolution":"2560x1440","ratio":"1.78","file_size":2103454,"file_type":"image/jpeg","created_at":"2021-09-13 11:16:29","colors":["#000000","#424153","#336600","#663399","#333399"],"path":"https://w.wallhaven.cc/full/28/wallhaven-283xjm.jpg","thumbs":{"large":"https://th.wallhaven.cc/lg/28/283xjm.jpg","original":"https://th.wallhaven.cc/orig/28/283xjm.jpg","small":"https://th.wallhaven.cc/small/28/283xjm.jpg"}},{"id":"m926r1","url":"https://wallhaven.cc/w/m926r1","short_url":"https://whvn.cc/m926r1","views":9,"favorites":6,"source":"https://twitter.com/QUASARCAKE/status/1437190627360342027","purity":"sfw","category":"anime","dimension_x":3760,"dimension_y":1740,"resolution":"3760x1740","ratio":"2.16","file_size":831485,"file_type":"image/jpeg","created_at":"2021-09-13 10:48:58","colors":["#000000","#424153","#999999","#cccccc","#663399"],"path":"https://w.wallhaven.cc/full/m9/wallhaven-m926r1.jpg","thumbs":{"large":"https://th.wallhaven.cc/lg/m9/m926r1.jpg","original":"https://th.wallhaven.cc/orig/m9/m926r1.jpg","small":"https://th.wallhaven.cc/small/m9/m926r1.jpg"}},{"id":"v951e8","url":"https://wallhaven.cc/w/v951e8","short_url":"https://whvn.cc/v951e8","views":202,"favorites":6,"source":"","purity":"sfw","category":"anime","dimension_x":1728,"dimension_y":1080,"resolution":"1728x1080","ratio":"1.6","file_size":342638,"file_type":"image/jpeg","created_at":"2021-09-13 06:25:04","colors":["#424153","#999999","#cccccc","#ffffff","#abbcda"],"path":"https://w.wallhaven.cc/full/v9/wallhaven-v951e8.jpg","thumbs":{"large":"https://th.wallhaven.cc/lg/v9/v951e8.jpg","original":"https://th.wallhaven.cc/orig/v9/v951e8.jpg","small":"https://th.wallhaven.cc/small/v9/v951e8.jpg"}},{"id":"6ow1el","url":"https://wallhaven.cc/w/6ow1el","short_url":"https://whvn.cc/6ow1el","views":212,"favorites":13,"source":"","purity":"sfw","category":"anime","dimension_x":1950,"dimension_y":900,"resolution":"1950x900","ratio":"2.17","file_size":761301,"file_type":"image/jpeg","created_at":"2021-09-13 06:25:04","colors":["#999999","#424153","#ffffff","#cccccc","#e7d8b1"],"path":"https://w.wallhaven.cc/full/6o/wallhaven-6ow1el.jpg","thumbs":{"large":"https://th.wallhaven.cc/lg/6o/6ow1el.jpg","original":"https://th.wallhaven.cc/orig/6o/6ow1el.jpg","small":"https://th.wallhaven.cc/small/6o/6ow1el.jpg"}},{"id":"y8vlk7","url":"https://wallhaven.cc/w/y8vlk7","short_url":"https://whvn.cc/y8vlk7","views":169,"favorites":7,"source":"","purity":"sfw","category":"anime","dimension_x":1792,"dimension_y":1008,"resolution":"1792x1008","ratio":"1.78","file_size":542131,"file_type":"image/jpeg","created_at":"2021-09-13 06:25:04","colors":["#424153","#0066cc","#333399","#0099cc","#66cccc"],"path":"https://w.wallhaven.cc/full/y8/wallhaven-y8vlk7.jpg","thumbs":{"large":"https://th.wallhaven.cc/lg/y8/y8vlk7.jpg","original":"https://th.wallhaven.cc/orig/y8/y8vlk7.jpg","small":"https://th.wallhaven.cc/small/y8/y8vlk7.jpg"}},{"id":"x8pykd","url":"https://wallhaven.cc/w/x8pykd","short_url":"https://whvn.cc/x8pykd","views":146,"favorites":10,"source":"","purity":"sfw","category":"anime","dimension_x":3200,"dimension_y":1929,"resolution":"3200x1929","ratio":"1.66","file_size":4133350,"file_type":"image/jpeg","created_at":"2021-09-13 06:25:04","colors":["#424153","#999999","#663399","#abbcda","#996633"],"path":"https://w.wallhaven.cc/full/x8/wallhaven-x8pykd.jpg","thumbs":{"large":"https://th.wallhaven.cc/lg/x8/x8pykd.jpg","original":"https://th.wallhaven.cc/orig/x8/x8pykd.jpg","small":"https://th.wallhaven.cc/small/x8/x8pykd.jpg"}},{"id":"e7wqvw","url":"https://wallhaven.cc/w/e7wqvw","short_url":"https://whvn.cc/e7wqvw","views":113,"favorites":9,"source":"","purity":"sfw","category":"anime","dimension_x":2047,"dimension_y":1447,"resolution":"2047x1447","ratio":"1.41","file_size":2594095,"file_type":"image/jpeg","created_at":"2021-09-13 06:25:04","colors":["#ffffff","#e7d8b1","#cccccc","#999999","#abbcda"],"path":"https://w.wallhaven.cc/full/e7/wallhaven-e7wqvw.jpg","thumbs":{"large":"https://th.wallhaven.cc/lg/e7/e7wqvw.jpg","original":"https://th.wallhaven.cc/orig/e7/e7wqvw.jpg","small":"https://th.wallhaven.cc/small/e7/e7wqvw.jpg"}},{"id":"wqmkx7","url":"https://wallhaven.cc/w/wqmkx7","short_url":"https://whvn.cc/wqmkx7","views":302,"favorites":20,"source":"","purity":"sfw","category":"anime","dimension_x":1600,"dimension_y":1148,"resolution":"1600x1148","ratio":"1.39","file_size":158397,"file_type":"image/jpeg","created_at":"2021-09-13 06:25:04","colors":["#ffffff","#000000","#424153","#cccccc","#999999"],"path":"https://w.wallhaven.cc/full/wq/wallhaven-wqmkx7.jpg","thumbs":{"large":"https://th.wallhaven.cc/lg/wq/wqmkx7.jpg","original":"https://th.wallhaven.cc/orig/wq/wqmkx7.jpg","small":"https://th.wallhaven.cc/small/wq/wqmkx7.jpg"}},{"id":"1kre2w","url":"https://wallhaven.cc/w/1kre2w","short_url":"https://whvn.cc/1kre2w","views":728,"favorites":18,"source":"","purity":"sfw","category":"general","dimension_x":1994,"dimension_y":2200,"resolution":"1994x2200","ratio":"0.91","file_size":5244746,"file_type":"image/png","created_at":"2021-09-13 06:17:49","colors":["#424153","#999999","#000000","#993399","#663399"],"path":"https://w.wallhaven.cc/full/1k/wallhaven-1kre2w.png","thumbs":{"large":"https://th.wallhaven.cc/lg/1k/1kre2w.jpg","original":"https://th.wallhaven.cc/orig/1k/1kre2w.jpg","small":"https://th.wallhaven.cc/small/1k/1kre2w.jpg"}},{"id":"k72gd6","url":"https://wallhaven.cc/w/k72gd6","short_url":"https://whvn.cc/k72gd6","views":626,"favorites":18,"source":"","purity":"sfw","category":"general","dimension_x":1626,"dimension_y":2200,"resolution":"1626x2200","ratio":"0.74","file_size":4398274,"file_type":"image/png","created_at":"2021-09-13 06:17:49","colors":["#424153","#999999","#663399","#000000","#abbcda"],"path":"https://w.wallhaven.cc/full/k7/wallhaven-k72gd6.png","thumbs":{"large":"https://th.wallhaven.cc/lg/k7/k72gd6.jpg","original":"https://th.wallhaven.cc/orig/k7/k72gd6.jpg","small":"https://th.wallhaven.cc/small/k7/k72gd6.jpg"}},{"id":"q2leo5","url":"https://wallhaven.cc/w/q2leo5","short_url":"https://whvn.cc/q2leo5","views":178,"favorites":0,"source":"","purity":"sfw","category":"general","dimension_x":1920,"dimension_y":1080,"resolution":"1920x1080","ratio":"1.78","file_size":1762139,"file_type":"image/png","created_at":"2021-09-13 06:13:44","colors":["#999999","#424153","#0099cc","#0066cc","#996633"],"path":"https://w.wallhaven.cc/full/q2/wallhaven-q2leo5.png","thumbs":{"large":"https://th.wallhaven.cc/lg/q2/q2leo5.jpg","original":"https://th.wallhaven.cc/orig/q2/q2leo5.jpg","small":"https://th.wallhaven.cc/small/q2/q2leo5.jpg"}},{"id":"72rkl9","url":"https://wallhaven.cc/w/72rkl9","short_url":"https://whvn.cc/72rkl9","views":482,"favorites":8,"source":"","purity":"sfw","category":"general","dimension_x":1528,"dimension_y":2200,"resolution":"1528x2200","ratio":"0.69","file_size":3719223,"file_type":"image/png","created_at":"2021-09-13 06:11:25","colors":["#999999","#333399","#424153","#663399","#000000"],"path":"https://w.wallhaven.cc/full/72/wallhaven-72rkl9.png","thumbs":{"large":"https://th.wallhaven.cc/lg/72/72rkl9.jpg","original":"https://th.wallhaven.cc/orig/72/72rkl9.jpg","small":"https://th.wallhaven.cc/small/72/72rkl9.jpg"}},{"id":"1kregw","url":"https://wallhaven.cc/w/1kregw","short_url":"https://whvn.cc/1kregw","views":403,"favorites":11,"source":"https://www.artstation.com/artwork/Vd36eb","purity":"sfw","category":"general","dimension_x":1440,"dimension_y":810,"resolution":"1440x810","ratio":"1.78","file_size":291159,"file_type":"image/jpeg","created_at":"2021-09-13 04:54:57","colors":["#000000","#424153","#999999","#996633","#663300"],"path":"https://w.wallhaven.cc/full/1k/wallhaven-1kregw.jpg","thumbs":{"large":"https://th.wallhaven.cc/lg/1k/1kregw.jpg","original":"https://th.wallhaven.cc/orig/1k/1kregw.jpg","small":"https://th.wallhaven.cc/small/1k/1kregw.jpg"}},{"id":"8orw9j","url":"https://wallhaven.cc/w/8orw9j","short_url":"https://whvn.cc/8orw9j","views":368,"favorites":12,"source":"https://www.artstation.com/artwork/PolQQy","purity":"sfw","category":"general","dimension_x":1754,"dimension_y":1240,"resolution":"1754x1240","ratio":"1.41","file_size":272800,"file_type":"image/jpeg","created_at":"2021-09-13 04:46:28","colors":["#424153","#999999","#663399","#996633","#000000"],"path":"https://w.wallhaven.cc/full/8o/wallhaven-8orw9j.jpg","thumbs":{"large":"https://th.wallhaven.cc/lg/8o/8orw9j.jpg","original":"https://th.wallhaven.cc/orig/8o/8orw9j.jpg","small":"https://th.wallhaven.cc/small/8o/8orw9j.jpg"}},{"id":"x8pydd","url":"https://wallhaven.cc/w/x8pydd","short_url":"https://whvn.cc/x8pydd","views":373,"favorites":12,"source":"","purity":"sfw","category":"anime","dimension_x":3840,"dimension_y":2160,"resolution":"3840x2160","ratio":"1.78","file_size":5758382,"file_type":"image/jpeg","created_at":"2021-09-13 03:27:20","colors":["#000000","#424153","#660000","#663300","#663399"],"path":"https://w.wallhaven.cc/full/x8/wallhaven-x8pydd.jpg","thumbs":{"large":"https://th.wallhaven.cc/lg/x8/x8pydd.jpg","original":"https://th.wallhaven.cc/orig/x8/x8pydd.jpg","small":"https://th.wallhaven.cc/small/x8/x8pydd.jpg"}},{"id":"pkyp7j","url":"https://wallhaven.cc/w/pkyp7j","short_url":"https://whvn.cc/pkyp7j","views":140,"favorites":0,"source":"","purity":"sfw","category":"general","dimension_x":3440,"dimension_y":1440,"resolution":"3440x1440","ratio":"2.39","file_size":3014690,"file_type":"image/jpeg","created_at":"2021-09-13 02:59:34","colors":["#424153","#999999","#000000","#996633","#0066cc"],"path":"https://w.wallhaven.cc/full/pk/wallhaven-pkyp7j.jpg","thumbs":{"large":"https://th.wallhaven.cc/lg/pk/pkyp7j.jpg","original":"https://th.wallhaven.cc/orig/pk/pkyp7j.jpg","small":"https://th.wallhaven.cc/small/pk/pkyp7j.jpg"}},{"id":"m926g1","url":"https://wallhaven.cc/w/m926g1","short_url":"https://whvn.cc/m926g1","views":119,"favorites":0,"source":"","purity":"sfw","category":"general","dimension_x":3440,"dimension_y":1440,"resolution":"3440x1440","ratio":"2.39","file_size":2930210,"file_type":"image/jpeg","created_at":"2021-09-13 02:59:34","colors":["#000000","#424153","#999999","#996633","#cccccc"],"path":"https://w.wallhaven.cc/full/m9/wallhaven-m926g1.jpg","thumbs":{"large":"https://th.wallhaven.cc/lg/m9/m926g1.jpg","original":"https://th.wallhaven.cc/orig/m9/m926g1.jpg","small":"https://th.wallhaven.cc/small/m9/m926g1.jpg"}},{"id":"l32ojq","url":"https://wallhaven.cc/w/l32ojq","short_url":"https://whvn.cc/l32ojq","views":111,"favorites":0,"source":"","purity":"sfw","category":"general","dimension_x":3440,"dimension_y":1440,"resolution":"3440x1440","ratio":"2.39","file_size":2446762,"file_type":"image/jpeg","created_at":"2021-09-13 02:59:34","colors":["#000000","#424153","#999999","#cccccc","#996633"],"path":"https://w.wallhaven.cc/full/l3/wallhaven-l32ojq.jpg","thumbs":{"large":"https://th.wallhaven.cc/lg/l3/l32ojq.jpg","original":"https://th.wallhaven.cc/orig/l3/l32ojq.jpg","small":"https://th.wallhaven.cc/small/l3/l32ojq.jpg"}}]
-     * meta : {"current_page":1,"last_page":15058,"per_page":24,"total":361372,"query":null,"seed":null}
+     * data
+     */ /**
+     * data : [{"id":"l32oer","url":"https://wallhaven.cc/w/l32oer","short_url":"https://whvn.cc/l32oer","views":6,"favorites":0,"source":"","purity":"sfw","category":"anime","dimension_x":1920,"dimension_y":1080,"resolution":"1920x1080","ratio":"1.78","file_size":2139165,"file_type":"image/jpeg","created_at":"2021-09-14 02:59:57","colors":["#000000","#ea4c88","#cc3333","#cc6633","#999999"],"path":"https://w.wallhaven.cc/full/l3/wallhaven-l32oer.jpg","thumbs":{"large":"https://th.wallhaven.cc/lg/l3/l32oer.jpg","original":"https://th.wallhaven.cc/orig/l3/l32oer.jpg","small":"https://th.wallhaven.cc/small/l3/l32oer.jpg"}},{"id":"m926xk","url":"https://wallhaven.cc/w/m926xk","short_url":"https://whvn.cc/m926xk","views":5,"favorites":5,"source":"https://www.pixiv.net/en/artworks/86227538","purity":"sfw","category":"anime","dimension_x":2581,"dimension_y":3500,"resolution":"2581x3500","ratio":"0.74","file_size":2712590,"file_type":"image/png","created_at":"2021-09-14 02:28:59","colors":["#ffffff","#424153","#cccccc","#fdadc7","#999999"],"path":"https://w.wallhaven.cc/full/m9/wallhaven-m926xk.png","thumbs":{"large":"https://th.wallhaven.cc/lg/m9/m926xk.jpg","original":"https://th.wallhaven.cc/orig/m9/m926xk.jpg","small":"https://th.wallhaven.cc/small/m9/m926xk.jpg"}},{"id":"72rkyv","url":"https://wallhaven.cc/w/72rkyv","short_url":"https://whvn.cc/72rkyv","views":4,"favorites":6,"source":"https://pixabay.com/photos/mountains-nature-lake-landscape-6613615/","purity":"sfw","category":"general","dimension_x":3963,"dimension_y":2229,"resolution":"3963x2229","ratio":"1.78","file_size":3230652,"file_type":"image/jpeg","created_at":"2021-09-14 02:28:05","colors":["#424153","#000000","#999999","#abbcda","#cccccc"],"path":"https://w.wallhaven.cc/full/72/wallhaven-72rkyv.jpg","thumbs":{"large":"https://th.wallhaven.cc/lg/72/72rkyv.jpg","original":"https://th.wallhaven.cc/orig/72/72rkyv.jpg","small":"https://th.wallhaven.cc/small/72/72rkyv.jpg"}},{"id":"6ow1v6","url":"https://wallhaven.cc/w/6ow1v6","short_url":"https://whvn.cc/6ow1v6","views":6,"favorites":4,"source":"https://pixabay.com/photos/map-world-travel-knowledge-6614075/","purity":"sfw","category":"general","dimension_x":4800,"dimension_y":3600,"resolution":"4800x3600","ratio":"1.33","file_size":7659672,"file_type":"image/jpeg","created_at":"2021-09-14 02:18:06","colors":["#e7d8b1","#999999","#996633","#663300","#cccc33"],"path":"https://w.wallhaven.cc/full/6o/wallhaven-6ow1v6.jpg","thumbs":{"large":"https://th.wallhaven.cc/lg/6o/6ow1v6.jpg","original":"https://th.wallhaven.cc/orig/6o/6ow1v6.jpg","small":"https://th.wallhaven.cc/small/6o/6ow1v6.jpg"}},{"id":"l32o5r","url":"https://wallhaven.cc/w/l32o5r","short_url":"https://whvn.cc/l32o5r","views":234,"favorites":7,"source":"","purity":"sfw","category":"general","dimension_x":1920,"dimension_y":2880,"resolution":"1920x2880","ratio":"0.67","file_size":924439,"file_type":"image/jpeg","created_at":"2021-09-14 00:28:41","colors":["#fdadc7","#999999","#424153","#abbcda","#000000"],"path":"https://w.wallhaven.cc/full/l3/wallhaven-l32o5r.jpg","thumbs":{"large":"https://th.wallhaven.cc/lg/l3/l32o5r.jpg","original":"https://th.wallhaven.cc/orig/l3/l32o5r.jpg","small":"https://th.wallhaven.cc/small/l3/l32o5r.jpg"}},{"id":"y8vlyk","url":"https://wallhaven.cc/w/y8vlyk","short_url":"https://whvn.cc/y8vlyk","views":239,"favorites":8,"source":"","purity":"sfw","category":"general","dimension_x":1920,"dimension_y":1264,"resolution":"1920x1264","ratio":"1.52","file_size":626008,"file_type":"image/jpeg","created_at":"2021-09-14 00:26:56","colors":["#424153","#000000","#999999","#996633","#e7d8b1"],"path":"https://w.wallhaven.cc/full/y8/wallhaven-y8vlyk.jpg","thumbs":{"large":"https://th.wallhaven.cc/lg/y8/y8vlyk.jpg","original":"https://th.wallhaven.cc/orig/y8/y8vlyk.jpg","small":"https://th.wallhaven.cc/small/y8/y8vlyk.jpg"}},{"id":"l32o52","url":"https://wallhaven.cc/w/l32o52","short_url":"https://whvn.cc/l32o52","views":149,"favorites":11,"source":"","purity":"sfw","category":"general","dimension_x":3840,"dimension_y":2273,"resolution":"3840x2273","ratio":"1.69","file_size":2182714,"file_type":"image/jpeg","created_at":"2021-09-14 00:20:38","colors":["#000000","#424153","#336600","#999999","#996633"],"path":"https://w.wallhaven.cc/full/l3/wallhaven-l32o52.jpg","thumbs":{"large":"https://th.wallhaven.cc/lg/l3/l32o52.jpg","original":"https://th.wallhaven.cc/orig/l3/l32o52.jpg","small":"https://th.wallhaven.cc/small/l3/l32o52.jpg"}},{"id":"57rq25","url":"https://wallhaven.cc/w/57rq25","short_url":"https://whvn.cc/57rq25","views":114,"favorites":5,"source":"","purity":"sfw","category":"general","dimension_x":1920,"dimension_y":1097,"resolution":"1920x1097","ratio":"1.75","file_size":610270,"file_type":"image/jpeg","created_at":"2021-09-14 00:20:38","colors":["#000000","#424153","#0099cc","#333399","#0066cc"],"path":"https://w.wallhaven.cc/full/57/wallhaven-57rq25.jpg","thumbs":{"large":"https://th.wallhaven.cc/lg/57/57rq25.jpg","original":"https://th.wallhaven.cc/orig/57/57rq25.jpg","small":"https://th.wallhaven.cc/small/57/57rq25.jpg"}},{"id":"y8vlyg","url":"https://wallhaven.cc/w/y8vlyg","short_url":"https://whvn.cc/y8vlyg","views":65,"favorites":3,"source":"","purity":"sfw","category":"general","dimension_x":1920,"dimension_y":1080,"resolution":"1920x1080","ratio":"1.78","file_size":798759,"file_type":"image/jpeg","created_at":"2021-09-14 00:20:38","colors":["#000000","#660000","#cc3333","#663300","#424153"],"path":"https://w.wallhaven.cc/full/y8/wallhaven-y8vlyg.jpg","thumbs":{"large":"https://th.wallhaven.cc/lg/y8/y8vlyg.jpg","original":"https://th.wallhaven.cc/orig/y8/y8vlyg.jpg","small":"https://th.wallhaven.cc/small/y8/y8vlyg.jpg"}},{"id":"8orwyy","url":"https://wallhaven.cc/w/8orwyy","short_url":"https://whvn.cc/8orwyy","views":279,"favorites":12,"source":"","purity":"sfw","category":"anime","dimension_x":3500,"dimension_y":2286,"resolution":"3500x2286","ratio":"1.53","file_size":1192635,"file_type":"image/jpeg","created_at":"2021-09-13 18:54:55","colors":["#424153","#333399","#000000","#999999","#663399"],"path":"https://w.wallhaven.cc/full/8o/wallhaven-8orwyy.jpg","thumbs":{"large":"https://th.wallhaven.cc/lg/8o/8orwyy.jpg","original":"https://th.wallhaven.cc/orig/8o/8orwyy.jpg","small":"https://th.wallhaven.cc/small/8o/8orwyy.jpg"}},{"id":"rdjx87","url":"https://wallhaven.cc/w/rdjx87","short_url":"https://whvn.cc/rdjx87","views":238,"favorites":12,"source":"","purity":"sfw","category":"anime","dimension_x":3000,"dimension_y":2000,"resolution":"3000x2000","ratio":"1.5","file_size":5189314,"file_type":"image/jpeg","created_at":"2021-09-13 18:54:55","colors":["#424153","#000000","#999999","#663399","#333399"],"path":"https://w.wallhaven.cc/full/rd/wallhaven-rdjx87.jpg","thumbs":{"large":"https://th.wallhaven.cc/lg/rd/rdjx87.jpg","original":"https://th.wallhaven.cc/orig/rd/rdjx87.jpg","small":"https://th.wallhaven.cc/small/rd/rdjx87.jpg"}},{"id":"z85j7w","url":"https://wallhaven.cc/w/z85j7w","short_url":"https://whvn.cc/z85j7w","views":84,"favorites":4,"source":"","purity":"sfw","category":"anime","dimension_x":3600,"dimension_y":1800,"resolution":"3600x1800","ratio":"2","file_size":5642276,"file_type":"image/png","created_at":"2021-09-13 17:54:07","colors":["#ffffff","#e7d8b1","#999999","#fdadc7","#cccccc"],"path":"https://w.wallhaven.cc/full/z8/wallhaven-z85j7w.png","thumbs":{"large":"https://th.wallhaven.cc/lg/z8/z85j7w.jpg","original":"https://th.wallhaven.cc/orig/z8/z85j7w.jpg","small":"https://th.wallhaven.cc/small/z8/z85j7w.jpg"}},{"id":"x8pyoo","url":"https://wallhaven.cc/w/x8pyoo","short_url":"https://whvn.cc/x8pyoo","views":88,"favorites":4,"source":"","purity":"sfw","category":"anime","dimension_x":3600,"dimension_y":1800,"resolution":"3600x1800","ratio":"2","file_size":5774556,"file_type":"image/png","created_at":"2021-09-13 17:53:27","colors":["#424153","#999999","#ffffff","#e7d8b1","#66cccc"],"path":"https://w.wallhaven.cc/full/x8/wallhaven-x8pyoo.png","thumbs":{"large":"https://th.wallhaven.cc/lg/x8/x8pyoo.jpg","original":"https://th.wallhaven.cc/orig/x8/x8pyoo.jpg","small":"https://th.wallhaven.cc/small/x8/x8pyoo.jpg"}},{"id":"m9265m","url":"https://wallhaven.cc/w/m9265m","short_url":"https://whvn.cc/m9265m","views":69,"favorites":4,"source":"","purity":"sfw","category":"anime","dimension_x":3600,"dimension_y":1800,"resolution":"3600x1800","ratio":"2","file_size":4795035,"file_type":"image/png","created_at":"2021-09-13 17:51:54","colors":["#ffffff","#000000","#424153","#e7d8b1","#fdadc7"],"path":"https://w.wallhaven.cc/full/m9/wallhaven-m9265m.png","thumbs":{"large":"https://th.wallhaven.cc/lg/m9/m9265m.jpg","original":"https://th.wallhaven.cc/orig/m9/m9265m.jpg","small":"https://th.wallhaven.cc/small/m9/m9265m.jpg"}},{"id":"72rkvo","url":"https://wallhaven.cc/w/72rkvo","short_url":"https://whvn.cc/72rkvo","views":79,"favorites":5,"source":"","purity":"sfw","category":"anime","dimension_x":3600,"dimension_y":1800,"resolution":"3600x1800","ratio":"2","file_size":4236595,"file_type":"image/png","created_at":"2021-09-13 17:51:14","colors":["#424153","#999999","#cccccc","#996633","#abbcda"],"path":"https://w.wallhaven.cc/full/72/wallhaven-72rkvo.png","thumbs":{"large":"https://th.wallhaven.cc/lg/72/72rkvo.jpg","original":"https://th.wallhaven.cc/orig/72/72rkvo.jpg","small":"https://th.wallhaven.cc/small/72/72rkvo.jpg"}},{"id":"g72k6d","url":"https://wallhaven.cc/w/g72k6d","short_url":"https://whvn.cc/g72k6d","views":295,"favorites":6,"source":"https://www.reddit.com/r/linuxmasterrace/comments/lxfg9j/someone_posted_uwuntu_so_i_made_nyarch/","purity":"sfw","category":"general","dimension_x":1920,"dimension_y":1080,"resolution":"1920x1080","ratio":"1.78","file_size":214163,"file_type":"image/png","created_at":"2021-09-13 17:50:25","colors":["#ffffff","#66cccc","#abbcda","#0099cc","#cccccc"],"path":"https://w.wallhaven.cc/full/g7/wallhaven-g72k6d.png","thumbs":{"large":"https://th.wallhaven.cc/lg/g7/g72k6d.jpg","original":"https://th.wallhaven.cc/orig/g7/g72k6d.jpg","small":"https://th.wallhaven.cc/small/g7/g72k6d.jpg"}},{"id":"q2leqq","url":"https://wallhaven.cc/w/q2leqq","short_url":"https://whvn.cc/q2leqq","views":195,"favorites":2,"source":"","purity":"sfw","category":"general","dimension_x":1920,"dimension_y":1080,"resolution":"1920x1080","ratio":"1.78","file_size":158808,"file_type":"image/jpeg","created_at":"2021-09-13 16:27:48","colors":["#000000","#424153","#abbcda","#999999","#ffffff"],"path":"https://w.wallhaven.cc/full/q2/wallhaven-q2leqq.jpg","thumbs":{"large":"https://th.wallhaven.cc/lg/q2/q2leqq.jpg","original":"https://th.wallhaven.cc/orig/q2/q2leqq.jpg","small":"https://th.wallhaven.cc/small/q2/q2leqq.jpg"}},{"id":"e7wqlr","url":"https://wallhaven.cc/w/e7wqlr","short_url":"https://whvn.cc/e7wqlr","views":251,"favorites":14,"source":"","purity":"sfw","category":"general","dimension_x":1920,"dimension_y":1080,"resolution":"1920x1080","ratio":"1.78","file_size":949445,"file_type":"image/jpeg","created_at":"2021-09-13 16:04:17","colors":["#424153","#999999","#cccccc","#000000","#abbcda"],"path":"https://w.wallhaven.cc/full/e7/wallhaven-e7wqlr.jpg","thumbs":{"large":"https://th.wallhaven.cc/lg/e7/e7wqlr.jpg","original":"https://th.wallhaven.cc/orig/e7/e7wqlr.jpg","small":"https://th.wallhaven.cc/small/e7/e7wqlr.jpg"}},{"id":"y8vlox","url":"https://wallhaven.cc/w/y8vlox","short_url":"https://whvn.cc/y8vlox","views":293,"favorites":17,"source":"","purity":"sfw","category":"anime","dimension_x":2048,"dimension_y":1188,"resolution":"2048x1188","ratio":"1.72","file_size":595885,"file_type":"image/jpeg","created_at":"2021-09-13 15:28:30","colors":["#999999","#424153","#e7d8b1","#cccccc","#996633"],"path":"https://w.wallhaven.cc/full/y8/wallhaven-y8vlox.jpg","thumbs":{"large":"https://th.wallhaven.cc/lg/y8/y8vlox.jpg","original":"https://th.wallhaven.cc/orig/y8/y8vlox.jpg","small":"https://th.wallhaven.cc/small/y8/y8vlox.jpg"}},{"id":"z85jjj","url":"https://wallhaven.cc/w/z85jjj","short_url":"https://whvn.cc/z85jjj","views":491,"favorites":28,"source":"","purity":"sfw","category":"anime","dimension_x":944,"dimension_y":2047,"resolution":"944x2047","ratio":"0.46","file_size":402569,"file_type":"image/jpeg","created_at":"2021-09-13 14:11:15","colors":["#999999","#fdadc7","#333399","#ea4c88","#424153"],"path":"https://w.wallhaven.cc/full/z8/wallhaven-z85jjj.jpg","thumbs":{"large":"https://th.wallhaven.cc/lg/z8/z85jjj.jpg","original":"https://th.wallhaven.cc/orig/z8/z85jjj.jpg","small":"https://th.wallhaven.cc/small/z8/z85jjj.jpg"}},{"id":"e7wqqr","url":"https://wallhaven.cc/w/e7wqqr","short_url":"https://whvn.cc/e7wqqr","views":289,"favorites":16,"source":"","purity":"sfw","category":"anime","dimension_x":1280,"dimension_y":2175,"resolution":"1280x2175","ratio":"0.59","file_size":1495452,"file_type":"image/jpeg","created_at":"2021-09-13 14:05:14","colors":["#ffffff","#fdadc7","#e7d8b1","#cccccc","#999999"],"path":"https://w.wallhaven.cc/full/e7/wallhaven-e7wqqr.jpg","thumbs":{"large":"https://th.wallhaven.cc/lg/e7/e7wqqr.jpg","original":"https://th.wallhaven.cc/orig/e7/e7wqqr.jpg","small":"https://th.wallhaven.cc/small/e7/e7wqqr.jpg"}},{"id":"72rkke","url":"https://wallhaven.cc/w/72rkke","short_url":"https://whvn.cc/72rkke","views":306,"favorites":8,"source":"","purity":"sfw","category":"general","dimension_x":4801,"dimension_y":3201,"resolution":"4801x3201","ratio":"1.5","file_size":13386697,"file_type":"image/jpeg","created_at":"2021-09-13 13:45:13","colors":["#996633","#663300","#e7d8b1","#999999","#000000"],"path":"https://w.wallhaven.cc/full/72/wallhaven-72rkke.jpg","thumbs":{"large":"https://th.wallhaven.cc/lg/72/72rkke.jpg","original":"https://th.wallhaven.cc/orig/72/72rkke.jpg","small":"https://th.wallhaven.cc/small/72/72rkke.jpg"}},{"id":"6ow11w","url":"https://wallhaven.cc/w/6ow11w","short_url":"https://whvn.cc/6ow11w","views":265,"favorites":5,"source":"","purity":"sfw","category":"general","dimension_x":5760,"dimension_y":3840,"resolution":"5760x3840","ratio":"1.5","file_size":1270698,"file_type":"image/jpeg","created_at":"2021-09-13 13:45:13","colors":["#999999","#424153","#000000","#996633","#663300"],"path":"https://w.wallhaven.cc/full/6o/wallhaven-6ow11w.jpg","thumbs":{"large":"https://th.wallhaven.cc/lg/6o/6ow11w.jpg","original":"https://th.wallhaven.cc/orig/6o/6ow11w.jpg","small":"https://th.wallhaven.cc/small/6o/6ow11w.jpg"}},{"id":"o32mml","url":"https://wallhaven.cc/w/o32mml","short_url":"https://whvn.cc/o32mml","views":275,"favorites":8,"source":"","purity":"sfw","category":"general","dimension_x":3000,"dimension_y":2000,"resolution":"3000x2000","ratio":"1.5","file_size":579115,"file_type":"image/jpeg","created_at":"2021-09-13 13:45:13","colors":["#996633","#999999","#424153","#663300","#e7d8b1"],"path":"https://w.wallhaven.cc/full/o3/wallhaven-o32mml.jpg","thumbs":{"large":"https://th.wallhaven.cc/lg/o3/o32mml.jpg","original":"https://th.wallhaven.cc/orig/o3/o32mml.jpg","small":"https://th.wallhaven.cc/small/o3/o32mml.jpg"}}]
+     * meta : {"current_page":1,"last_page":15059,"per_page":24,"total":361393,"query":null,"seed":null}
      */
 
     @SerializedName("data")
-    private List<DataDTO> data;
+    public List<DataDTO> data;
+    /**
+     * meta
+     */
     @SerializedName("meta")
-    private MetaDTO meta;
-
+    public MetaDTO meta;
 
     public static class MetaDTO {
         /**
+         * currentPage
+         */ /**
          * current_page : 1
-         * last_page : 15058
+         * last_page : 15059
          * per_page : 24
-         * total : 361372
+         * total : 361393
          * query : null
          * seed : null
          */
 
         @SerializedName("current_page")
-        private Integer currentPage;
+        public Integer currentPage;
+        /**
+         * lastPage
+         */
         @SerializedName("last_page")
-        private Integer lastPage;
+        public Integer lastPage;
+        /**
+         * perPage
+         */
         @SerializedName("per_page")
-        private Integer perPage;
+        public Integer perPage;
+        /**
+         * total
+         */
         @SerializedName("total")
-        private Integer total;
+        public Integer total;
+        /**
+         * query
+         */
         @SerializedName("query")
-        private Object query;
+        public Object query;
+        /**
+         * seed
+         */
         @SerializedName("seed")
-        private Object seed;
+        public Object seed;
     }
 
     public static class DataDTO {
         /**
-         * id : 8orw61
-         * url : https://wallhaven.cc/w/8orw61
-         * short_url : https://whvn.cc/8orw61
-         * views : 4
+         * id
+         */ /**
+         * id : l32oer
+         * url : https://wallhaven.cc/w/l32oer
+         * short_url : https://whvn.cc/l32oer
+         * views : 6
          * favorites : 0
          * source :
          * purity : sfw
          * category : anime
-         * dimension_x : 1700
-         * dimension_y : 1107
-         * resolution : 1700x1107
-         * ratio : 1.54
-         * file_size : 1798111
-         * file_type : image/png
-         * created_at : 2021-09-13 12:12:54
-         * colors : ["#ffffff","#cccccc","#424153","#e7d8b1","#999999"]
-         * path : https://w.wallhaven.cc/full/8o/wallhaven-8orw61.png
-         * thumbs : {"large":"https://th.wallhaven.cc/lg/8o/8orw61.jpg","original":"https://th.wallhaven.cc/orig/8o/8orw61.jpg","small":"https://th.wallhaven.cc/small/8o/8orw61.jpg"}
+         * dimension_x : 1920
+         * dimension_y : 1080
+         * resolution : 1920x1080
+         * ratio : 1.78
+         * file_size : 2139165
+         * file_type : image/jpeg
+         * created_at : 2021-09-14 02:59:57
+         * colors : ["#000000","#ea4c88","#cc3333","#cc6633","#999999"]
+         * path : https://w.wallhaven.cc/full/l3/wallhaven-l32oer.jpg
+         * thumbs : {"large":"https://th.wallhaven.cc/lg/l3/l32oer.jpg","original":"https://th.wallhaven.cc/orig/l3/l32oer.jpg","small":"https://th.wallhaven.cc/small/l3/l32oer.jpg"}
          */
 
         @SerializedName("id")
-        private String id;
+        public String id;
+        /**
+         * url
+         */
         @SerializedName("url")
-        private String url;
+        public String url;
+        /**
+         * shortUrl
+         */
         @SerializedName("short_url")
-        private String shortUrl;
+        public String shortUrl;
+        /**
+         * views
+         */
         @SerializedName("views")
-        private Integer views;
+        public Integer views;
+        /**
+         * favorites
+         */
         @SerializedName("favorites")
-        private Integer favorites;
+        public Integer favorites;
+        /**
+         * source
+         */
         @SerializedName("source")
-        private String source;
+        public String source;
+        /**
+         * purity
+         */
         @SerializedName("purity")
-        private String purity;
+        public String purity;
+        /**
+         * category
+         */
         @SerializedName("category")
-        private String category;
+        public String category;
+        /**
+         * dimensionX
+         */
         @SerializedName("dimension_x")
-        private Integer dimensionX;
+        public Integer dimensionX;
+        /**
+         * dimensionY
+         */
         @SerializedName("dimension_y")
-        private Integer dimensionY;
+        public Integer dimensionY;
+        /**
+         * resolution
+         */
         @SerializedName("resolution")
-        private String resolution;
+        public String resolution;
+        /**
+         * ratio
+         */
         @SerializedName("ratio")
-        private String ratio;
+        public String ratio;
+        /**
+         * fileSize
+         */
         @SerializedName("file_size")
-        private Integer fileSize;
+        public Integer fileSize;
+        /**
+         * fileType
+         */
         @SerializedName("file_type")
-        private String fileType;
+        public String fileType;
+        /**
+         * createdAt
+         */
         @SerializedName("created_at")
-        private String createdAt;
+        public String createdAt;
+        /**
+         * colors
+         */
         @SerializedName("colors")
-        private List<String> colors;
+        public List<String> colors;
+        /**
+         * path
+         */
         @SerializedName("path")
-        private String path;
+        public String path;
+        /**
+         * thumbs
+         */
         @SerializedName("thumbs")
-        private ThumbsDTO thumbs;
-
+        public ThumbsDTO thumbs;
 
         public static class ThumbsDTO {
             /**
-             * large : https://th.wallhaven.cc/lg/8o/8orw61.jpg
-             * original : https://th.wallhaven.cc/orig/8o/8orw61.jpg
-             * small : https://th.wallhaven.cc/small/8o/8orw61.jpg
+             * large
+             */ /**
+             * large : https://th.wallhaven.cc/lg/l3/l32oer.jpg
+             * original : https://th.wallhaven.cc/orig/l3/l32oer.jpg
+             * small : https://th.wallhaven.cc/small/l3/l32oer.jpg
              */
 
             @SerializedName("large")
-            private String large;
+            public String large;
+            /**
+             * original
+             */
             @SerializedName("original")
-            private String original;
+            public String original;
+            /**
+             * small
+             */
             @SerializedName("small")
-            private String small;
+            public String small;
         }
     }
 }

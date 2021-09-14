@@ -1,4 +1,3 @@
 include ':app'
-include ':common'
 include ':mvplibrary'
 rootProject.name = "wallpaperEngine"

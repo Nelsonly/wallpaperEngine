@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -9,7 +10,7 @@
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="?attr/toolbarStyle"
+        android:layout_height="?attr/actionBarSize"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -20,7 +21,7 @@
         android:id="@+id/rectflow"
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        app:tab_color="@color/white"
+        app:tab_color="#FFA6A6"
         app:tab_height="3dp"
         app:tab_item_autoScale="true"
         app:tab_scale_factor="1.1"
@@ -34,8 +35,8 @@
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/viewpager"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_constraintTop_toBottomOf="@id/rectflow"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
 
-        />
+        app:layout_constraintTop_toBottomOf="@id/rectflow" />
 </androidx.constraintlayout.widget.ConstraintLayout>

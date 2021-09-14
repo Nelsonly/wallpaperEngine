@@ -1,15 +1,13 @@
 package com.nelson.myapplication.api;
 
-package com.nelson.weather.api;
-
-
 
 import retrofit2.Call;
 import retrofit2.http.GET;
 import retrofit2.http.Path;
 import retrofit2.http.Query;
 
-
+import com.nelson.myapplication.bean.WallhavenBean;
+import  com.nelson.myapplication.bean.AndroidWallpaperBean;
 /**
  * API服务接口
  *
@@ -21,8 +19,8 @@ public interface ApiService {
      *
      * @return BiYingImgResponse 必应壁纸返回
      */
-    @GET("/HPImageArchive.aspx?format=js&idx=0&n=1")
-    Call<BiYingImgResponse> biying();
+//    @GET("/HPImageArchive.aspx?format=js&idx=0&n=1")
+//    Call<BiYingImgResponse> biying();
 
 
     /**
@@ -31,5 +29,8 @@ public interface ApiService {
      * @return WallPaperResponse 网络壁纸数据返回
      */
     @GET("/v1/vertical/vertical?limit=30&skip=180&adult=false&first=0&order=hot")
-    Call<WallPaperResponse> getWallPaper();
+    Call<AndroidWallpaperBean> getWallPaper();
+
+    @GET("/api/v1/search")
+    Call<WallhavenBean> getWallHave();
 }
