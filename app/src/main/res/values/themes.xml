@@ -4,4 +4,12 @@
         <!-- Primary brand color. -->
         <!-- Customize your theme here. -->
     </style>
+
+    <style name="Theme.WallpaperEngine.AppWidgetContainerParent" parent="@android:style/Theme.DeviceDefault">
+        <item name="appWidgetRadius">8dp</item>
+        <item name="appWidgetPadding">4dp</item>
+        <item name="appWidgetInnerRadius">4dp</item>
+    </style>
+
+    <style name="Theme.WallpaperEngine.AppWidgetContainer" parent="Theme.WallpaperEngine.AppWidgetContainerParent" />
 </resources>
