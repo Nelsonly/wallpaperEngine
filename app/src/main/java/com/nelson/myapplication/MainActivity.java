@@ -1,5 +1,6 @@
 package com.nelson.myapplication;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.os.PersistableBundle;
@@ -70,6 +71,13 @@ public class MainActivity extends MvpActivity<MainContract.MainPresent> implemen
             imgUrl.add(verticalDTOS.get(i).img);
         }
         mFragments.get(0).setImgUrl(imgUrl);
+
+        Intent intent1 = new Intent();
+        intent1.setAction(NewAppWidget.ACTION_URL);
+        intent1.setClassName(this,"com.nelson.myapplication.NewAppWidget");
+        intent1.putExtra("url",androidWallpaperBeanResponse.body().res.vertical.get(0).thumb);
+//        intent1.addFlags(Intent.FLAG_INCLUDE_STOPPED_PACKAGES);
+        getApplicationContext().sendBroadcast(intent1);
     }
 
     @Override
