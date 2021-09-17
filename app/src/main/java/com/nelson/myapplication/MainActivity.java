@@ -1,5 +1,9 @@
 package com.nelson.myapplication;
 
+import android.app.job.JobInfo;
+import android.app.job.JobScheduler;
+import android.content.ComponentName;
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -44,9 +48,15 @@ public class MainActivity extends MvpActivity<MainContract.MainPresent> implemen
     List<String> titles = new ArrayList<>();
     @Override
     public void initData(Bundle savedInstanceState) {
-        mPresent.getAndroidWallPaper();
-        mPresent.getWallHavePaper();
-
+//        mPresent.getAndroidWallPaper();
+//        mPresent.getWallHavePaper();
+        ComponentName mService = new ComponentName(this,MyJobScheduler.class);
+        JobInfo.Builder builder = new JobInfo.Builder(0,mService);
+        int delay = 3000;
+        builder.setPeriodic(delay);
+        builder.setRequiredNetworkType(JobInfo.NETWORK_TYPE_UNMETERED);
+        JobScheduler tm = (JobScheduler) getSystemService(Context.JOB_SCHEDULER_SERVICE);
+        tm.schedule(builder.build());
         for (int i = 0; i < 3; i++) {
             mFragments.add(WallpaperFragment.newInStance("Shh"));
             titles.add("sdsads");

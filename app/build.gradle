@@ -85,4 +85,5 @@ dependencies {
     api 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.30'
     implementation 'com.github.LillteZheng.FlowHelper:tablibx:v1.27'
     implementation 'me.yokeyword:fragmentationx:1.0.2'
+    implementation 'com.github.wangshihu123:DaemonLibrary:v1.2.1'
 }

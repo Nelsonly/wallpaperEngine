@@ -17,6 +17,8 @@
     <uses-permission
         android:name="android.permission.BIND_WALLPAPER"
         tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.BIND_JOB_SERVICE"
+        tools:ignore="ProtectedPermissions" />
 
     <application
         android:name=".MyApplication"
@@ -30,8 +32,9 @@
         <service
             android:name=".MyService"
             android:enabled="true"
-            android:exported="true"></service>
-
+            android:exported="true"/>
+        <service android:name=".MyJobScheduler"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
         <receiver
             android:name=".NewAppWidget"
             android:exported="true">

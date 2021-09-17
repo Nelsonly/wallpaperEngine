@@ -1,5 +1,7 @@
 package com.nelson.myapplication;
 
+import android.app.job.JobInfo;
+import android.app.job.JobScheduler;
 import android.appwidget.AppWidgetManager;
 import android.appwidget.AppWidgetProvider;
 import android.content.ComponentName;
@@ -19,6 +21,7 @@ public class NewAppWidget extends AppWidgetProvider {
     public static final String ACTION_URL = "com.nelson.myapplication.TEXT_CHANGED";
     public static int appWidgetId;
     String s;
+    private int mJobId = 0;
     static void updateAppWidget(Context context, AppWidgetManager appWidgetManager,
                                 int appWidgetId,String s) {
         CharSequence widgetText = context.getString(R.string.appwidget_text);
@@ -63,6 +66,13 @@ public class NewAppWidget extends AppWidgetProvider {
         // Enter relevant functionality for when the first widget is created
         Intent intent = new Intent(context.getApplicationContext(),MyService.class);
         context.startService(intent);
+        ComponentName mService = new ComponentName(context,MyJobScheduler.class);
+        JobInfo.Builder builder = new JobInfo.Builder(mJobId++,mService);
+        int delay = 3000;
+        builder.setMinimumLatency(delay);
+        builder.setRequiredNetworkType(JobInfo.NETWORK_TYPE_UNMETERED);
+        JobScheduler tm = (JobScheduler) context.getSystemService(Context.JOB_SCHEDULER_SERVICE);
+        tm.schedule(builder.build());
     }
 
     @Override
